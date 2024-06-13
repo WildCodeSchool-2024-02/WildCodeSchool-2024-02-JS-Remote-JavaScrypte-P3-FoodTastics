@@ -1,0 +1,28 @@
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10svh;
+  width: 100svw;
+  background-color: #0e4749;
+  text-align: center;
+}
+
+.footer-link {
+  color: #fffffc;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  font-weight: bolder;
+}
+
+.footer-link:visited {
+  color: #fffffc;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    font-size: 1.2rem;
+  }
+}
