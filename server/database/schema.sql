@@ -2,7 +2,7 @@ CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
     category VARCHAR(255),
-    image_profile BLOB,
+    image_profile TEXT,
     calories INT,
     proteins INT,
     carbohydrates INT,
@@ -21,7 +21,7 @@ CREATE TABLE badge (
 CREATE TABLE label (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
-    image BLOB,
+    image TEXT,
     description TEXT
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE user (
     lastname VARCHAR(80),
     password VARCHAR(80),
     pseudo VARCHAR(80),
-    image_profile BLOB,
+    image_profile TEXT,
     email VARCHAR(80),
     is_admin BOOLEAN,
     comment_quantity INT,
@@ -49,7 +49,7 @@ CREATE TABLE recipe (
     name VARCHAR(255),
     number_of_people INT,
     description TEXT,
-    image BLOB,
+    image TEXT,
     date DATE,
     is_favorite BOOLEAN,
     vote INT,
