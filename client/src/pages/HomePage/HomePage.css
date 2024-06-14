@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/client/public/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "NowAlt-Medium";
+  src: url("/client/public/fonts/NowAlt-Medium.otf");
+}
+
+@media screen and (max-width: 767px) {
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffffc;
+    padding-top: 100px;
+  }
+
+  .imgcontainer {
+    display: flex;
+    max-width: 180px;
+    height: 100%;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin: 0 auto 20px;
+    border: 3px solid #0e4749;
+    border-radius: 15px;
+    box-shadow:
+      -5px 5px 0px 0px #0e4749,
+      -10px 10px 0px 0px rgba(14, 71, 73, 0.8),
+      -15px 15px 0px 0px rgba(14, 71, 73, 0.6),
+      -20px 20px 0px 0px rgba(14, 71, 73, 0.4);
+  }
+
+  .image {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-family: "Aleo-Black";
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #0e4749;
+  }
+
+  .text {
+    margin-bottom: 20px;
+    font-family: "NowAlt-Mediun";
+    font-size: 1.5rem;
+    color: #0e4749;
+  }
+
+  .button {
+    font-family: "NowAlt-Mediun";
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #0e4749;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #e88d67;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #fffffc;
+    padding-top: 50px;
+  }
+
+  .imgcontainer {
+    max-width: 300px;
+    margin: 0 auto 40px;
+    border: 3px solid #0e4749;
+    border-radius: 15px;
+    box-shadow:
+      -5px 5px 0px 0px #0e4749,
+      -10px 10px 0px 0px rgba(14, 71, 73, 0.8),
+      -15px 15px 0px 0px rgba(14, 71, 73, 0.6),
+      -20px 20px 0px 0px rgba(14, 71, 73, 0.4);
+  }
+
+  .image {
+    max-width: 280px;
+    border-radius: 15px;
+  }
+
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-family: "Aleo-Black";
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+    color: #0e4749;
+  }
+
+  .text {
+    font-family: "NowAlt-Mediun";
+    margin-bottom: 20px;
+    font-family: "Now";
+    font-size: 1.5rem;
+    color: #0e4749;
+  }
+
+  .button {
+    font-family: "NowAlt-Mediun";
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #0e4749;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #e88d67;
+  }
+}
