@@ -1,17 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   const redirectionToHome = () => {
-    window.location.href = "/";
+    navigate("/");
   };
+
   return (
     <div className="Navbar">
       <button className="Logo" type="button" onClick={redirectionToHome}>
         <img
           className="logoImage"
           src="src/assets/images/Logo_foodtastics.png"
-          alt="logo du site"
+          alt="logo del sitio"
         />
       </button>
       <Menu />
