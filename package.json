@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/WildCodeSchool/harmonia_p3.git"
   },
-  "workspaces": ["client", "server"],
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "postinstall": "husky install || true",
     "db:migrate": "npm run db:migrate --workspace=server",
