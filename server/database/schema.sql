@@ -15,7 +15,8 @@ CREATE TABLE ingredient (
 CREATE TABLE badge (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(80),
-    description VARCHAR(255)
+    description VARCHAR(255),
+    image TEXT
 );
 
 CREATE TABLE label (
