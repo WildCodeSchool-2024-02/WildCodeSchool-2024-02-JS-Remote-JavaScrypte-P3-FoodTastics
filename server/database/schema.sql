@@ -2,7 +2,7 @@ CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
     category VARCHAR(255),
-    image_profile TEXT,
+    image TEXT,
     calories INT,
     proteins INT,
     carbohydrates INT,
@@ -41,7 +41,7 @@ CREATE TABLE user (
     is_admin BOOLEAN,
     comment_quantity INT,
     ingredient_id INT,
-    FOREIGN KEY (ingredient_id) REFERENCES ingredient(id)
+    FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
 );
 
 CREATE TABLE recipe (
@@ -57,8 +57,8 @@ CREATE TABLE recipe (
     is_validated BOOLEAN,
     user_id INT,
     badge_id INT,
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (badge_id) REFERENCES badge(id)
+    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (badge_id) REFERENCES badge (id)
 );
 
 CREATE TABLE comment (
@@ -69,8 +69,8 @@ CREATE TABLE comment (
     is_validated BOOLEAN,
     user_id INT,
     recipe_id INT,
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (recipe_id) REFERENCES recipe(id)
+    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id)
 );
 
 CREATE TABLE user_menu_recipe (
@@ -78,9 +78,9 @@ CREATE TABLE user_menu_recipe (
     recipe_id INT,
     user_id INT,
     menu_id INT,
-    FOREIGN KEY (recipe_id) REFERENCES recipe(id),
-    FOREIGN KEY (user_id) REFERENCES user(id),
-    FOREIGN KEY (menu_id) REFERENCES menu(id)
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id),
+    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (menu_id) REFERENCES menu (id)
 );
 
 CREATE TABLE badge_user (
@@ -88,16 +88,16 @@ CREATE TABLE badge_user (
     badge_id INT,
     user_id INT,
     date DATE,
-    FOREIGN KEY (badge_id) REFERENCES badge(id),
-    FOREIGN KEY (user_id) REFERENCES user(id)
+    FOREIGN KEY (badge_id) REFERENCES badge (id),
+    FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
 CREATE TABLE recipe_label (
     id INT PRIMARY KEY AUTO_INCREMENT,
     label_id INT,
     recipe_id INT,
-    FOREIGN KEY (label_id) REFERENCES label(id),
-    FOREIGN KEY (recipe_id) REFERENCES recipe(id)
+    FOREIGN KEY (label_id) REFERENCES label (id),
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id)
 );
 
 CREATE TABLE recipe_ingredient (
@@ -105,6 +105,6 @@ CREATE TABLE recipe_ingredient (
     recipe_id INT,
     ingredient_id INT,
     quantity INT,
-    FOREIGN KEY (recipe_id) REFERENCES recipe(id),
-    FOREIGN KEY (ingredient_id) REFERENCES ingredient(id)
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id),
+    FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
 );
