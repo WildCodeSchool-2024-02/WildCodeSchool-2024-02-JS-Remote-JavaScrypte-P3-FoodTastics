@@ -1,3 +1,14 @@
+CREATE TABLE user (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    firstname VARCHAR(80),
+    lastname VARCHAR(80),
+    password VARCHAR(80),
+    pseudo VARCHAR(80),
+    image_profile TEXT,
+    email VARCHAR(80),
+    is_admin BOOLEAN,
+    comment_quantity INT NULL
+);
 CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
@@ -9,7 +20,9 @@ CREATE TABLE ingredient (
     sugar INT,
     lipids INT,
     salt INT,
-    fiber INT
+    fiber INT,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
 CREATE TABLE badge (
@@ -30,19 +43,7 @@ CREATE TABLE menu (
     date DATE
 );
 
-CREATE TABLE user (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    firstname VARCHAR(80),
-    lastname VARCHAR(80),
-    password VARCHAR(80),
-    pseudo VARCHAR(80),
-    image_profile TEXT,
-    email VARCHAR(80),
-    is_admin BOOLEAN,
-    comment_quantity INT NULL,
-    ingredient_id INT,
-    FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
-);
+
 
 CREATE TABLE recipe (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -64,7 +65,6 @@ CREATE TABLE recipe (
 CREATE TABLE comment (
     id INT PRIMARY KEY AUTO_INCREMENT,
     date DATE,
-    user VARCHAR(255),
     description TEXT,
     is_validated BOOLEAN,
     user_id INT,
@@ -82,7 +82,6 @@ CREATE TABLE user_menu_recipe (
     FOREIGN KEY (user_id) REFERENCES user (id),
     FOREIGN KEY (menu_id) REFERENCES menu (id)
 );
-
 CREATE TABLE badge_user (
     id INT PRIMARY KEY AUTO_INCREMENT,
     badge_id INT,
