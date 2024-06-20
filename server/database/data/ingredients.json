@@ -9,8 +9,9 @@
     "sugar": 19,
     "lipids": 0.2,
     "salt": 0.001,
-    "fiber": 2.4
-  },
+    "fiber": 2.4,
+    "user_id": null   
+},
   {
     "name": "Banane",
     "category": "Fruit",
@@ -21,7 +22,8 @@
     "sugar": 14,
     "lipids": 0.3,
     "salt": 0.001,
-    "fiber": 2.6
+    "fiber": 2.6,
+    "user_id": null
   },
   {
     "name": "Nectarine",
@@ -33,7 +35,8 @@
     "sugar": 11,
     "lipids": 0.3,
     "salt": 0,
-    "fiber": 1.7
+    "fiber": 1.7,
+    "user_id": null 
   },
   {
     "name": "Poire",
@@ -45,7 +48,8 @@
     "sugar": 17,
     "lipids": 0.1,
     "salt": 0.001,
-    "fiber": 3.1
+    "fiber": 3.1,
+    "user_id": null  
   },
   {
     "name": "Raisin",
@@ -57,7 +61,8 @@
     "sugar": 23,
     "lipids": 0.2,
     "salt": 0.002,
-    "fiber": 0.9
+    "fiber": 0.9,
+    "user_id": null   
   },
   {
     "name": "Fraise",
@@ -69,7 +74,8 @@
     "sugar": 7,
     "lipids": 0.3,
     "salt": 0.002,
-    "fiber": 2
+    "fiber": 2,
+    "user_id": null   
   },
   {
     "name": "Framboise",
@@ -81,7 +87,8 @@
     "sugar": 5,
     "lipids": 0.7,
     "salt": 0,
-    "fiber": 6.5
+    "fiber": 6.5,
+    "user_id": null   
   },
   {
     "name": "Cerise",
@@ -93,8 +100,8 @@
     "sugar": 18,
     "lipids": 0.3,
     "salt": 0,
-    "fiber": 1.6
-  },
+    "fiber": 1.6,
+    "user_id": null   },
   {
     "name": "Carotte",
     "category": "Légume",
@@ -105,8 +112,8 @@
     "sugar": 3,
     "lipids": 0.2,
     "salt": 0.042,
-    "fiber": 2.8
-  },
+    "fiber": 2.8,
+    "user_id": null   },
   {
     "name": "Épinards",
     "category": "Légume",
@@ -117,8 +124,8 @@
     "sugar": 0.2,
     "lipids": 0.4,
     "salt": 0.024,
-    "fiber": 2.2
-  },
+    "fiber": 2.2,
+    "user_id": null   },
   {
     "name": "Tomate",
     "category": "Légume",
@@ -129,8 +136,8 @@
     "sugar": 2.6,
     "lipids": 0.2,
     "salt": 0.005,
-    "fiber": 1.2
-  },
+    "fiber": 1.2,
+    "user_id": null   },
   {
     "name": "Oignon",
     "category": "Légume",
@@ -141,8 +148,8 @@
     "sugar": 5,
     "lipids": 0.1,
     "salt": 0.004,
-    "fiber": 1.7
-  },
+    "fiber": 1.7,
+    "user_id": null   },
   {
     "name": "Ail",
     "category": "Légume",
@@ -153,8 +160,8 @@
     "sugar": 0.1,
     "lipids": 0.5,
     "salt": 0.001,
-    "fiber": 2.1
-  },
+    "fiber": 2.1,
+    "user_id": null   },
   {
     "name": "Poivron",
     "category": "Légume",
@@ -165,8 +172,8 @@
     "sugar": 3,
     "lipids": 0.3,
     "salt": 0.003,
-    "fiber": 2.1
-  },
+    "fiber": 2.1,
+    "user_id": null   },
   {
     "name": "Avocat",
     "category": "Fruit",
@@ -177,8 +184,8 @@
     "sugar": 0.7,
     "lipids": 15,
     "salt": 0.007,
-    "fiber": 7
-  },
+    "fiber": 7,
+    "user_id": null   },
   {
     "name": "Courgette",
     "category": "Légume",
@@ -189,8 +196,8 @@
     "sugar": 3.1,
     "lipids": 0.3,
     "salt": 0.012,
-    "fiber": 1
-  },
+    "fiber": 1,
+    "user_id": null   },
   {
     "name": "Brocoli",
     "category": "Légume",
@@ -201,8 +208,8 @@
     "sugar": 1.5,
     "lipids": 0.4,
     "salt": 0.03,
-    "fiber": 2.6
-  },
+    "fiber": 2.6,
+    "user_id": null   },
   {
     "name": "Champignons",
     "category": "Légume",
@@ -213,8 +220,8 @@
     "sugar": 1.1,
     "lipids": 0.3,
     "salt": 0.004,
-    "fiber": 1
-  },
+    "fiber": 1,
+    "user_id": null   },
   {
     "name": "Citron",
     "category": "Fruit",
@@ -225,8 +232,8 @@
     "sugar": 1.5,
     "lipids": 0.3,
     "salt": 0.001,
-    "fiber": 2.8
-  },
+    "fiber": 2.8,
+    "user_id": null   },
   {
     "name": "Laitue",
     "category": "Légume",
@@ -237,8 +244,8 @@
     "sugar": 11,
     "lipids": 0.2,
     "salt": 0,
-    "fiber": 1.3
-  },
+    "fiber": 1.3,
+    "user_id": null   },
   {
     "name": "Pomme de terre",
     "category": "Légume",
@@ -249,8 +256,8 @@
     "sugar": 2,
     "lipids": 0.1,
     "salt": 0.013,
-    "fiber": 2.2
-  },
+    "fiber": 2.2,
+    "user_id": null   },
   {
     "name": "Haricot",
     "category": "Légume",
@@ -261,8 +268,8 @@
     "sugar": 1.5,
     "lipids": 0.1,
     "salt": 0.006,
-    "fiber": 3.4
-  },
+    "fiber": 3.4,
+    "user_id": null   },
   {
     "name": "Chou-fleur",
     "category": "Légume",
@@ -273,8 +280,8 @@
     "sugar": 1.9,
     "lipids": 0.3,
     "salt": 0.03,
-    "fiber": 2
-  },
+    "fiber": 2,
+    "user_id": null   },
   {
     "name": "Potiron",
     "category": "Légume",
@@ -285,8 +292,8 @@
     "sugar": 2.8,
     "lipids": 0.1,
     "salt": 0.001,
-    "fiber": 0.5
-  },
+    "fiber": 0.5,
+    "user_id": null   },
   {
     "name": "Poulet",
     "category": "Viande",
@@ -297,7 +304,8 @@
     "sugar": 0,
     "lipids": 14,
     "salt": 0.07,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null   
   },
   {
     "name": "Bœuf",
@@ -309,7 +317,8 @@
     "sugar": 11,
     "lipids": 15,
     "salt": 0.075,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null   
   },
   {
     "name": "Porc",
@@ -321,8 +330,9 @@
     "sugar": 0,
     "lipids": 16,
     "salt": 0.065,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null 
+    },
   {
     "name": "Agneau",
     "category": "Viande",
@@ -333,7 +343,8 @@
     "sugar": 11,
     "lipids": 21,
     "salt": 0.07,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null   
   },
   {
     "name": "Saumon",
@@ -345,8 +356,9 @@
     "sugar": 11,
     "lipids": 13,
     "salt": 0.05,
-    "fiber": 0
-  },
+    "fiber": 0,
+     "user_id": null   
+    },
   {
     "name": "Thon",
     "category": "Poisson",
@@ -357,8 +369,9 @@
     "sugar": 522,
     "lipids": 4.9,
     "salt": 0,
-    "fiber": 0
-  },
+    "fiber": 0,
+     "user_id": null   
+    },
   {
     "name": "Crevette",
     "category": "crustacé",
@@ -369,8 +382,9 @@
     "sugar": 0,
     "lipids": 0.3,
     "salt": 0.28,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Morue",
     "category": "Poisson",
@@ -381,8 +395,9 @@
     "sugar": 0,
     "lipids": 0.7,
     "salt": 0.1,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Lait",
     "category": "produit laitier",
@@ -393,7 +408,8 @@
     "sugar": 5,
     "lipids": 1,
     "salt": 0.1,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null   
   },
   {
     "name": "Cheddar",
@@ -405,8 +421,9 @@
     "sugar": 0.5,
     "lipids": 33,
     "salt": 1.8,
-    "fiber": 0
-  },
+    "fiber": 0,
+     "user_id": null  
+     },
   {
     "name": "Mozzarella",
     "category": "fromage",
@@ -417,8 +434,9 @@
     "sugar": 1,
     "lipids": 17,
     "salt": 0.7,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Parmesan",
     "category": "Fromage",
@@ -429,8 +447,9 @@
     "sugar": 0,
     "lipids": 29,
     "salt": 1.7,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Yaourt",
     "category": "Produit laitier",
@@ -441,8 +460,9 @@
     "sugar": 3.2,
     "lipids": 0.4,
     "salt": 0.1,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Crème fraîche",
     "category": "Produit laitier",
@@ -453,8 +473,9 @@
     "sugar": 3.4,
     "lipids": 20,
     "salt": 0.08,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Beurre",
     "category": "Produit laitier",
@@ -465,8 +486,9 @@
     "sugar": 0.1,
     "lipids": 81,
     "salt": 1.5,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Œufs",
     "category": "oeuf",
@@ -477,8 +499,9 @@
     "sugar": 1.1,
     "lipids": 11,
     "salt": 0.37,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null  
+   },
   {
     "name": "Riz",
     "category": "Grain",
@@ -489,8 +512,9 @@
     "sugar": 0.1,
     "lipids": 0.3,
     "salt": 0.01,
-    "fiber": 0.4
-  },
+    "fiber": 0.4,
+    "user_id": null  
+   },
   {
     "name": "Pâtes",
     "category": "Céréale",
@@ -501,7 +525,8 @@
     "sugar": 0,
     "lipids": 1.1,
     "salt": 0,
-    "fiber": 1.2
+    "fiber": 1.2,
+     "user_id": null 
   },
   {
     "name": "Quinoa",
@@ -513,7 +538,8 @@
     "sugar": 0,
     "lipids": 1.9,
     "salt": 0,
-    "fiber": 2.8
+    "fiber": 2.8,
+    "user_id": null
   },
   {
     "name": "Lentilles",
@@ -525,8 +551,9 @@
     "sugar": 0,
     "lipids": 0.4,
     "salt": 0,
-    "fiber": 7.9
-  },
+    "fiber": 7,
+    "user_id": null
+},
   {
     "name": "Pois chiches",
     "category": "Légumineuse",
@@ -537,8 +564,9 @@
     "sugar": 0,
     "lipids": 2.6,
     "salt": 0,
-    "fiber": 7.6
-  },
+    "fiber": 7.6,
+    "user_id": null  
+   },
   {
     "name": "Haricot rouge",
     "category": "Légumineuse",
@@ -549,8 +577,9 @@
     "sugar": 0,
     "lipids": 0.5,
     "salt": 0,
-    "fiber": 6.4
-  },
+    "fiber": 6.4,
+    "user_id": null 
+    },
   {
     "name": "Avoine",
     "category": "Céréales",
@@ -561,7 +590,8 @@
     "sugar": 1.2,
     "lipids": 6.9,
     "salt": 0,
-    "fiber": 10.6
+    "fiber": 10.6,
+    "user_id": null
   },
   {
     "name": "Huile d'olive",
@@ -573,7 +603,8 @@
     "sugar": 0,
     "lipids": 100,
     "salt": 0,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null 
   },
   {
     "name": "Huile de tournesol",
@@ -585,8 +616,8 @@
     "sugar": 0,
     "lipids": 100,
     "salt": 0,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null   },
   {
     "name": "Huile de coco",
     "category": "Huile",
@@ -597,8 +628,8 @@
     "sugar": 0,
     "lipids": 100,
     "salt": 0,
-    "fiber": 0
-  },
+    "fiber": 0,
+    "user_id": null   },
   {
     "name": "Huile de colza",
     "category": "Huile",
@@ -609,7 +640,8 @@
     "sugar": 0,
     "lipids": 100,
     "salt": 0,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null  
   },
   {
     "name": "Margarine",
@@ -621,7 +653,8 @@
     "sugar": 0.5,
     "lipids": 81,
     "salt": 1.2,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null
   },
   {
     "name": "Sel",
@@ -633,7 +666,8 @@
     "sugar": 0,
     "lipids": 0,
     "salt": 38.8,
-    "fiber": 0
+    "fiber": 0,
+    "user_id": null
   },
   {
     "name": "Poivre",
@@ -645,7 +679,8 @@
     "sugar": 0,
     "lipids": 3.3,
     "salt": 0.05,
-    "fiber": 25.3
+    "fiber": 25.3,
+    "user_id": null 
   },
   {
     "name": "Paprika",
@@ -657,7 +692,8 @@
     "sugar": 10.3,
     "lipids": 12.9,
     "salt": 0.09,
-    "fiber": 34.9
+    "fiber": 34.9,
+    "user_id": null 
   },
   {
     "name": "Cumin",
@@ -669,7 +705,8 @@
     "sugar": 2.3,
     "lipids": 22.3,
     "salt": 0.168,
-    "fiber": 10.5
+    "fiber": 10.5,
+    "user_id": null 
   },
   {
     "name": "Curcuma",
@@ -681,7 +718,8 @@
     "sugar": 3.2,
     "lipids": 9.9,
     "salt": 0.095,
-    "fiber": 21
+    "fiber": 21,
+    "user_id": null
   },
   {
     "name": "Basilic",
@@ -693,7 +731,8 @@
     "sugar": 0.3,
     "lipids": 0.6,
     "salt": 0.03,
-    "fiber": 1.6
+    "fiber": 1.6,
+    "user_id": null 
   },
   {
     "name": "Persil",
@@ -705,7 +744,8 @@
     "sugar": 0.85,
     "lipids": 0.8,
     "salt": 0.01,
-    "fiber": 3.3
+    "fiber": 3.3,
+    "user_id": null
   },
   {
     "name": "Thym",
@@ -717,7 +757,8 @@
     "sugar": 1.7,
     "lipids": 7.4,
     "salt": 0.01,
-    "fiber": 37
+    "fiber": 37,
+    "user_id": null  
   },
   {
     "name": "Romarin",
@@ -729,7 +770,8 @@
     "sugar": 0.5,
     "lipids": 5.9,
     "salt": 0.01,
-    "fiber": 14.1
+    "fiber": 14.1,
+    "user_id": null
   },
   {
     "name": "Cannelle",
@@ -741,7 +783,8 @@
     "sugar": 2.2,
     "lipids": 1.2,
     "salt": 0.01,
-    "fiber": 11.0
+    "fiber": 11.0,
+    "user_id": null
   },
   {
     "name": "Gingembre",
@@ -753,7 +796,8 @@
     "sugar": 3.4,
     "lipids": 6.0,
     "salt": 0.07,
-    "fiber": 14.1
+    "fiber": 14.1,
+    "user_id": null
   },
   {
     "name": "Farine",
@@ -765,7 +809,8 @@
     "sugar": 0.3,
     "lipids": 1.0,
     "salt": 0.002,
-    "fiber": 2.7
+    "fiber": 2.7,
+    "user_id": null
   },
   {
     "name": "Sucre",
@@ -777,7 +822,8 @@
     "sugar": 100.0,
     "lipids": 0.0,
     "salt": 0.0,
-    "fiber": 0.0
+    "fiber": 0.0,
+    "user_id": null
   },
   {
     "name": "Levure",
@@ -789,7 +835,8 @@
     "sugar": 0.0,
     "lipids": 6.0,
     "salt": 0.3,
-    "fiber": 27.0
+    "fiber": 27.0,
+    "user_id": null 
   },
   {
     "name": "Bouillon de légumes",
@@ -801,7 +848,8 @@
     "sugar": 1.0,
     "lipids": 0.1,
     "salt": 0.8,
-    "fiber": 0.2
+    "fiber": 0.2,
+    "user_id": null
   },
   {
     "name": "Vinaigre",
@@ -813,7 +861,8 @@
     "sugar": 0.0,
     "lipids": 0.0,
     "salt": 0.0,
-    "fiber": 0.0
+    "fiber": 0.0,
+    "user_id": null
   },
   {
     "name": "Sauce soja",
@@ -825,7 +874,8 @@
     "sugar": 0.4,
     "lipids": 0.1,
     "salt": 5.7,
-    "fiber": 0.8
+    "fiber": 0.8,
+    "user_id": null 
   },
   {
     "name": "Miel",
@@ -837,7 +887,8 @@
     "sugar": 82.1,
     "lipids": 0.0,
     "salt": 0.0,
-    "fiber": 0.2
+    "fiber": 0.2,
+    "user_id": null
   },
   {
     "name": "Moutarde",
@@ -849,7 +900,8 @@
     "sugar": 2.0,
     "lipids": 5.0,
     "salt": 1.7,
-    "fiber": 3.0
+    "fiber": 3.0,
+    "user_id": null
   },
   {
     "name": "Pâte de tomate",
@@ -861,7 +913,8 @@
     "sugar": 2.0,
     "lipids": 5.0,
     "salt": 1.7,
-    "fiber": 3.0
+    "fiber": 3.0,
+    "user_id": null
   },
   {
     "name": "Melon",
@@ -873,7 +926,8 @@
     "sugar": 7.86,
     "lipids": 0.19,
     "salt": 0.015,
-    "fiber": 0.9
+    "fiber": 0.9,
+    "user_id": null
   },
   {
     "name": "Pastèque",
@@ -885,7 +939,8 @@
     "sugar": 6.2,
     "lipids": 0.15,
     "salt": 0.01,
-    "fiber": 0.4
+    "fiber": 0.4,
+    "user_id": null
   },
   {
     "name": "Orange",
@@ -897,7 +952,8 @@
     "sugar": 9.35,
     "lipids": 0.12,
     "salt": 0.001,
-    "fiber": 2.4
+    "fiber": 2.4,
+    "user_id": null
   },
   {
     "name": "Pêche",
@@ -909,7 +965,8 @@
     "sugar": 8.39,
     "lipids": 0.25,
     "salt": 0.001,
-    "fiber": 1.5
+    "fiber": 1.5,
+    "user_id": null
   },
   {
     "name": "Mangue",
@@ -921,7 +978,8 @@
     "sugar": 13.66,
     "lipids": 0.38,
     "salt": 0.001,
-    "fiber": 1.6
+    "fiber": 1.6,
+    "user_id": null
   },
   {
     "name": "Abricot",
@@ -933,7 +991,8 @@
     "sugar": 9.24,
     "lipids": 0.39,
     "salt": 0.001,
-    "fiber": 2.0
+    "fiber": 2.0,
+    "user_id": null
   },
   {
     "name": "Pamplemousse",
@@ -945,7 +1004,8 @@
     "sugar": 6.98,
     "lipids": 0.1,
     "salt": 0.001,
-    "fiber": 1.1
+    "fiber": 1.1,
+    "user_id": null
   },
   {
     "name": "Litchi",
@@ -957,7 +1017,8 @@
     "sugar": 15.23,
     "lipids": 0.44,
     "salt": 0.001,
-    "fiber": 1.3
+    "fiber": 1.3,
+    "user_id": null
   },
   {
     "name": "Fruits de la passion",
@@ -969,7 +1030,8 @@
     "sugar": 11.2,
     "lipids": 0.4,
     "salt": 0.001,
-    "fiber": 10.4
+    "fiber": 10.4,
+    "user_id": null
   },
   {
     "name": "Coco",
@@ -981,7 +1043,8 @@
     "sugar": 6.23,
     "lipids": 33.49,
     "salt": 0.03,
-    "fiber": 9.0
+    "fiber": 9.0,
+    "user_id": null
   },
   {
     "name": "Datte",
@@ -993,7 +1056,8 @@
     "sugar": 63.35,
     "lipids": 0.39,
     "salt": 0.002,
-    "fiber": 8.0
+    "fiber": 8.0,
+    "user_id": null
   },
   {
     "name": "Figue",
@@ -1005,7 +1069,8 @@
     "sugar": 16.26,
     "lipids": 0.3,
     "salt": 0.001,
-    "fiber": 2.9
+    "fiber": 2.9,
+    "user_id": null
   },
   {
     "name": "Groseille",
@@ -1017,7 +1082,8 @@
     "sugar": 7.37,
     "lipids": 0.2,
     "salt": 0.003,
-    "fiber": 4.3
+    "fiber": 4.3,
+    "user_id": null
   },
   {
     "name": "Mûre",
@@ -1029,7 +1095,8 @@
     "sugar": 4.88,
     "lipids": 0.49,
     "salt": 0.001,
-    "fiber": 5.3
+    "fiber": 5.3,
+    "user_id": null
   },
   {
     "name": "Papaye",
@@ -1041,7 +1108,8 @@
     "sugar": 7.82,
     "lipids": 0.26,
     "salt": 0.001,
-    "fiber": 1.7
+    "fiber": 1.7,
+    "user_id": null
   },
   {
     "name": "Fruits du dragon",
@@ -1053,7 +1121,8 @@
     "sugar": 8.0,
     "lipids": 0.3,
     "salt": 0.01,
-    "fiber": 3.0
+    "fiber": 3.0,
+    "user_id": null
   },
   {
     "name": "Prune",
@@ -1065,7 +1134,8 @@
     "sugar": 9.92,
     "lipids": 0.28,
     "salt": 0.001,
-    "fiber": 1.4
+    "fiber": 1.4,
+    "user_id": null
   },
   {
     "name": "Physalis",
@@ -1077,7 +1147,8 @@
     "sugar": 8.0,
     "lipids": 0.7,
     "salt": 0.02,
-    "fiber": 4.3
+    "fiber": 4.3,
+    "user_id": null
   },
   {
     "name": "Myrtille",
@@ -1089,7 +1160,8 @@
     "sugar": 9.96,
     "lipids": 0.33,
     "salt": 0.001,
-    "fiber": 2.4
+    "fiber": 2.4,
+    "user_id": null
   },
   {
     "name": "Chou-vert",
@@ -1101,8 +1173,8 @@
     "sugar": 3.2,
     "lipids": 0.1,
     "salt": 0.018,
-    "fiber": 2.5
-  },
+    "fiber": 2.5,
+    "user_id": null   },
   {
     "name": "Mais",
     "category": "Légume",
@@ -1113,9 +1185,9 @@
     "sugar": 6.26,
     "lipids": 1.35,
     "salt": 0.005,
-    "fiber": 2.7
+    "fiber": 2.7,
+    "user_id": null 
   },
-
   {
     "name": "Radis",
     "category": "Légume",
@@ -1126,7 +1198,8 @@
     "sugar": 1.86,
     "lipids": 0.1,
     "salt": 0.039,
-    "fiber": 1.6
+    "fiber": 1.6,
+    "user_id": null
   },
   {
     "name": "Concombre",
@@ -1138,7 +1211,8 @@
     "sugar": 1.67,
     "lipids": 0.11,
     "salt": 0.002,
-    "fiber": 0.5
+    "fiber": 0.5,
+    "user_id": null
   },
   {
     "name": "Betterave",
@@ -1150,7 +1224,8 @@
     "sugar": 6.76,
     "lipids": 0.17,
     "salt": 0.06,
-    "fiber": 2.8
+    "fiber": 2.8,
+    "user_id": null
   },
   {
     "name": "Poireau",
@@ -1162,7 +1237,8 @@
     "sugar": 3.9,
     "lipids": 0.3,
     "salt": 0.02,
-    "fiber": 1.8
+    "fiber": 1.8,
+    "user_id": null
   },
   {
     "name": "Endives",
@@ -1174,7 +1250,8 @@
     "sugar": 0.3,
     "lipids": 0.1,
     "salt": 0.003,
-    "fiber": 3.1
+    "fiber": 3.1,
+    "user_id": null
   },
   {
     "name": "Céleri",
@@ -1186,7 +1263,8 @@
     "sugar": 1.4,
     "lipids": 0.17,
     "salt": 0.08,
-    "fiber": 1.6
+    "fiber": 1.6,
+    "user_id": null
   },
   {
     "name": "Salsifi",
@@ -1198,7 +1276,8 @@
     "sugar": 6.0,
     "lipids": 0.2,
     "salt": 0.065,
-    "fiber": 3.0
+    "fiber": 3.0,
+    "user_id": null
   },
   {
     "name": "Farine de maïs",
@@ -1210,7 +1289,8 @@
     "sugar": 1.3,
     "lipids": 1.5,
     "salt": 0.01,
-    "fiber": 7.3
+    "fiber": 7.3,
+    "user_id": null
   },
   {
     "name": "Avoine",
@@ -1222,7 +1302,8 @@
     "sugar": 0.8,
     "lipids": 6.9,
     "salt": 0.01,
-    "fiber": 10.6
+    "fiber": 10.6,
+    "user_id": null
   },
   {
     "name": "Curry",
@@ -1234,7 +1315,8 @@
     "sugar": 3.2,
     "lipids": 14.3,
     "salt": 0.9,
-    "fiber": 14.0
+    "fiber": 14.0,
+    "user_id": null
   },
   {
     "name": "Ail en poudre",
@@ -1246,6 +1328,7 @@
     "sugar": 4.2,
     "lipids": 0.6,
     "salt": 0.1,
-    "fiber": 9.0
+    "fiber": 9.0,
+    "user_id": null
   }
 ]
