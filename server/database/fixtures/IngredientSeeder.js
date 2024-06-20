@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 const ingredients = require("../data/ingredients.json");
 
 const AbstractSeeder = require("./AbstractSeeder");
@@ -21,6 +23,7 @@ class IngredientSeeder extends AbstractSeeder {
         lipids,
         salt,
         fiber,
+        user_id
       } = ingredient;
       this.insert({
         name,
@@ -33,6 +36,7 @@ class IngredientSeeder extends AbstractSeeder {
         lipids,
         salt,
         fiber,
+        user_id,
         refName: `ingredient_${i}`,
       });
     }
