@@ -1,22 +1,20 @@
 [
-{
-"firstname":"Anne",
-"lastname":"Damien",
-"password":"Toto",
-"pseudo":"Pika",
-"image_profile":"https://images-ext-1.discordapp.net/external/dfMPRVUYBu0uSYKAiijI5WdVBK26CHAQzfNS50itaNs/https/cherry.img.pmdstatic.net/fit/https.3A.2F.2Fimg.2Egaming.2Egentside.2Ecom.2Fs3.2Ffrgsg.2F1024.2Fpokemon.2Fdefault_2022-07-19_4cf65306-9151-40c6-a4c2-428b4116187d.2Ejpeg/640x360/quality/80/pokemon-pikachu-jean-luc-prenom-francais.jpg?format=webp&width=1280&height=720",
-"email": "annedamien1234@gmail.com",
-"is_admin": false, 
-"comment_quantity": null
-},
-{
- "firstname": "Angel",
- "lastname": "Ique",
- "password": "Tata",
- "pseudo": "Angel",
-"image_profile": "https://cdn.pixabay.com/photo/2017/04/09/12/52/toque-2215717_1280.png",
- "email": "iqueangel817@gmail.com'",
- "is_admin": false,
- "comment_quantity": null
-}
+  {
+    "firstname": "Anne",
+    "lastname": "Damien",
+    "password": "Toto",
+    "pseudo": "Pika",
+    "image_profile": "https://images-ext-1.discordapp.net/external/dfMPRVUYBu0uSYKAiijI5WdVBK26CHAQzfNS50itaNs/https/cherry.img.pmdstatic.net/fit/https.3A.2F.2Fimg.2Egaming.2Egentside.2Ecom.2Fs3.2Ffrgsg.2F1024.2Fpokemon.2Fdefault_2022-07-19_4cf65306-9151-40c6-a4c2-428b4116187d.2Ejpeg/640x360/quality/80/pokemon-pikachu-jean-luc-prenom-francais.jpg?format=webp&width=1280&height=720",
+    "email": "annedamien1234@gmail.com",
+    "role": "user"
+  },
+  {
+    "firstname": "Angel",
+    "lastname": "Ique",
+    "password": "Tata",
+    "pseudo": "Angel",
+    "image_profile": "https://cdn.pixabay.com/photo/2017/04/09/12/52/toque-2215717_1280.png",
+    "email": "iqueangel817@gmail.com'",
+    "role": "admin"
+  }
 ]
