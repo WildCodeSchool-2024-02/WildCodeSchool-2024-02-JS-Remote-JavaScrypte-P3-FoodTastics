@@ -9,12 +9,12 @@ class BadgeSeeder extends AbstractSeeder {
 
   run() {
     for (let i = 0; i < badges.length; i += 1) {
-      const ingredient = badges[i];
+      const badge = badges[i];
       const {
         name,
         description,
         image
-      } = ingredient;
+      } = badge;
       this.insert({
         name,
         description,
