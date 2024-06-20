@@ -13,14 +13,13 @@ class UserSeeder extends AbstractSeeder {
       const user = users[i];
       const {
         firstname,
-        lastname, 
+        lastname,
         password,
-        pseudo, 
-        image_profile, 
-        email, 
-        is_admin, 
-        comment_quantity
-    } = user;
+        pseudo,
+        image_profile,
+        email,
+        role,
+      } = user;
 
       this.insert({
         firstname,
@@ -29,12 +28,11 @@ class UserSeeder extends AbstractSeeder {
         pseudo,
         image_profile,
         email,
-        is_admin,
-        comment_quantity,
+        role,
         refName: `user_${i}`,
-    });
-}
-}
+      });
+    }
+  }
 }
 
 module.exports = UserSeeder;
