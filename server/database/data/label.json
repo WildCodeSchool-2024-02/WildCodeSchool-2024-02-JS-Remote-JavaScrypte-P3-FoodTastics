@@ -2,31 +2,31 @@
     {
         
         "name": "Végétarien",
-        "image": " ../../../client/src/assets/images/Vegetarien.png",
+        "image": " ../../../client/public/images/Vegetarien.png",
         "description": "Recettes ne contenant pas de viande ni de poisson."
     },
     {
         
         "name": "Végétalien",
-        "image": "../../../client/src/assets/images/Vegetalien.png",
+        "image": "../../../client/public/images/Vegetalien.png",
         "description": "Recettes ne contenant aucun produit d'origine animale."
     },
     {
         
         "name": "Sans gluten",
-        "image": "../../../client/src/assets/images/Sans gluten.png",
+        "image": "../../../client/public/images/Sans gluten.png",
         "description": "Recettes ne contenant pas de gluten." 
     },
     {
         
         "name": "Sans lactose",
-        "image": "../../../client/src/assets/images/Sans lactose.png",
+        "image": "../../../client/public/images/Sans lactose.png",
         "description": "Recettes ne contenant pas de lactose."
     },
     {
         
         "name": "Cétogène",
-        "image": "../../../client/src/assets/images/Cetogene.png",
+        "image": "../../../client/public/images/Cetogene.png",
         "description": "Recettes adaptées au régime cétogène, riches en graisses et pauvres en glucides."
 
         
@@ -34,7 +34,7 @@
 {
         
         "name": "Pescétarien",
-        "image": "../../../client/src/assets/images/Pescétarien.png",
+        "image": "../../../client/public/images/Pescétarien.png",
         "description": "Recettes ne contenant pas de viande."
     }
 ]
