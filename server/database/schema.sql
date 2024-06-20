@@ -8,6 +8,7 @@ CREATE TABLE user (
     email VARCHAR(80) NOT NULL,
     role VARCHAR(80) NOT NULL
 );
+
 CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(255) NOT NULL,
@@ -41,8 +42,6 @@ CREATE TABLE menu (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     date DATE NOT NULL
 );
-
-
 
 CREATE TABLE recipe (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -81,6 +80,7 @@ CREATE TABLE user_menu_recipe (
     FOREIGN KEY (user_id) REFERENCES user (id),
     FOREIGN KEY (menu_id) REFERENCES menu (id)
 );
+
 CREATE TABLE badge_user (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     badge_id INT NOT NULL,
