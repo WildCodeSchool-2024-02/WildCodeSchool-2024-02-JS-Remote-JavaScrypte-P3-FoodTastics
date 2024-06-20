@@ -9,8 +9,8 @@
     "vote": 0,
     "set_up_time": 10,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Soupe de Pelures de Légumes",
@@ -22,8 +22,8 @@
     "vote": 0,
     "set_up_time": 30,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Tarte aux Légumes et Herbes Aromatiques Zéro Déchets",
@@ -35,8 +35,8 @@
     "vote": 0,
     "set_up_time": 45,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Gaspacho de Radis et Velouté de Fanes de Radis",
@@ -48,8 +48,8 @@
     "vote": 0,
     "set_up_time": 30,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Muffins aux céréales",
@@ -61,8 +61,8 @@
     "vote": 0,
     "set_up_time": 40,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Boulettes de Légumes",
@@ -74,8 +74,8 @@
     "vote": 0,
     "set_up_time": 40,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Curry de Légumes et Lentilles",
@@ -87,8 +87,8 @@
     "vote": 0,
     "set_up_time": 50,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
 
   {
@@ -101,8 +101,8 @@
     "vote": 0,
     "set_up_time": 40,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Pain perdu",
@@ -114,8 +114,8 @@
     "vote": 0,
     "set_up_time": 35,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Pesto avec fanes de radis",
@@ -127,8 +127,8 @@
     "vote": 0,
     "set_up_time": 10,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Bouillon aux épluchures et fanes",
@@ -140,8 +140,8 @@
     "vote": 0,
     "set_up_time": 120,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Chips avec épluchures de pomme",
@@ -153,8 +153,8 @@
     "vote": 0,
     "set_up_time": 35,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Crêpes peaux de bananes",
@@ -166,8 +166,8 @@
     "vote": 0,
     "set_up_time": 20,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Confit d’écorces de melon et de pastèque",
@@ -179,8 +179,8 @@
     "vote": 0,
     "set_up_time": 180,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Crackers aux fanes",
@@ -192,8 +192,8 @@
     "vote": 0,
     "set_up_time": 50,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   },
   {
     "name": "Pavé de saumon en papillote de poireaux au four",
@@ -205,7 +205,7 @@
     "vote": 0,
     "set_up_time": 85,
     "is_validated": false,
-    "user_id": null,
-    "badge_id": null
+    "user_id": 2,
+    "badge_id": 1
   }
 ]
