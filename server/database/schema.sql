@@ -6,7 +6,7 @@ CREATE TABLE user (
     pseudo VARCHAR(80) NOT NULL,
     image_profile TEXT NOT NULL,
     email VARCHAR(80) NOT NULL,
-    role VARCHAR(80) NOT NULL,
+    role VARCHAR(80) NOT NULL
 );
 CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
