@@ -1,0 +1,40 @@
+[
+    {
+        
+        "name": "Végétarien",
+        "image": "/images/Vegetarien.png",
+        "description": "Recettes ne contenant pas de viande ni de poisson."
+    },
+    {
+        
+        "name": "Végétalien",
+        "image": "/images/Vegetalien.png",
+        "description": "Recettes ne contenant aucun produit d'origine animale."
+    },
+    {
+        
+        "name": "Sans gluten",
+        "image": "/images/Sans gluten.png",
+        "description": "Recettes ne contenant pas de gluten." 
+    },
+    {
+        
+        "name": "Sans lactose",
+        "image": "/images/Sans lactose.png",
+        "description": "Recettes ne contenant pas de lactose."
+    },
+    {
+        
+        "name": "Cétogène",
+        "image": "/images/Cetogene.png",
+        "description": "Recettes adaptées au régime cétogène, riches en graisses et pauvres en glucides."
+
+        
+    },
+{
+        
+        "name": "Pescétarien",
+        "image": "/images/Pescétarien.png",
+        "description": "Recettes ne contenant pas de viande."
+    }
+]
