@@ -40,7 +40,7 @@ CREATE TABLE user (
     image_profile TEXT,
     email VARCHAR(80),
     is_admin BOOLEAN,
-    comment_quantity INT,
+    comment_quantity INT NULL,
     ingredient_id INT,
     FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
 );

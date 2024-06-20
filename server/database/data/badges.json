@@ -2,21 +2,21 @@
     {
     "name": "Maître des recettes",
     "description": "Tu as posté plus de 10 recettes, félicitations",
-    "image": "../../../client/src/assets/images/Badge_id1.png"
+    "image": "/images/Badge_id1.png"
     } ,
     {
     "name": "Maître des ingrédients",
     "description":"Tu as crée plus de 10 ingrédients, félicitations" ,
-    "image": "../../../client/src/assets/images/Badge_id2.png"
+    "image": "/images/Badge_id2.png"
     },
     {
     "name":"Une légende, tu seras" ,
     "description": "Ta recette fait sensation auprès des Nam-Nam, félicitations",
-    "image": "../../../client/src/assets/images/Badge_id3.png"
+    "image": "/images/Badge_id3.png"
     },
     {
     "name":"Admirable Nam-Nam" ,
     "description": "Félicitations petit Nam-Nam, tu as énormement contribué au développement.. peut-on dire que tu es notre héros ? ;)",
-    "image": "../../../client/src/assets/images/Badge_id4.png"
+    "image": "/images/Badge_id4.png"
     } 
 ]
