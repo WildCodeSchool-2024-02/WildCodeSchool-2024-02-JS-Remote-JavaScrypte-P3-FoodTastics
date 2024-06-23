@@ -1,0 +1,93 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+.connection-container {
+  padding: 20px 20px 20px 20px;
+  background-color: var(--second-color);
+  border-radius: 15px;
+  border: solid 5px var(--second-color);
+  margin-bottom: 1.5rem;
+}
+
+.form-connection {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-connection {
+  color: var(--third-color);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-connection input {
+  color: var(--third-color);
+  background-color: var(--second-color);
+  padding-bottom: 1rem;
+  border: none;
+  border-bottom: solid 1px;
+  margin: 0.5rem;
+  font-size: 15px;
+}
+
+.btn-connection {
+  background-color: var(--third-color);
+  color: var(--second-color);
+  border-radius: 25px;
+  border: solid 1px var(--second-color);
+  padding: 0.5rem;
+  margin: 1.5rem 5rem 1.5rem 5rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+span {
+  color: red;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .connection-container {
+    padding: 30px;
+  }
+
+  .title-connection {
+    font-size: 1.7rem;
+  }
+
+  .form-connection input {
+    font-size: 17px;
+  }
+
+  .btn-connection {
+    margin: 1.5rem 10rem 0 10rem;
+    font-size: 18px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .form-connection {
+    padding-bottom: 60px;
+  }
+
+  .title-connection {
+    font-size: 2rem;
+  }
+
+  .form-connection input {
+    font-size: 17px;
+  }
+
+  .btn-connection {
+    margin: 1.5rem 8rem 0 8rem;
+    padding: 0.7rem;
+    font-size: 17px;
+  }
+}
