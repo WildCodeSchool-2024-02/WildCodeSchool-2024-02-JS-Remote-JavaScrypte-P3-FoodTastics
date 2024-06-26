@@ -5,7 +5,7 @@ function HomePage() {
     <div className="homepage">
       <div className="imgcontainer">
         <img
-          src="./src/assets/images/Accueil.jpeg"
+          src="../../../public/images/Accueil.jpeg"
           alt="plat cuisiné"
           className="image"
         />
