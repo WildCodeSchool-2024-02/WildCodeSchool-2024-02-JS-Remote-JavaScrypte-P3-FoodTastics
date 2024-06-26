@@ -95,7 +95,10 @@ const seed = async () => {
       ingredientSeeder,
       labelSeeder,
       menuSeeder,
+      recipeIngredientSeeder,
+      recipeLabelSeeder,
       recipeSeeder,
+      userMenuRecipeSeeder,
       userSeeder,
     ] = sortedSeeders;
 
@@ -106,8 +109,11 @@ const seed = async () => {
       labelSeeder,
       menuSeeder,
       recipeSeeder,
+      userMenuRecipeSeeder,
+      recipeLabelSeeder,
       commentSeeder,
       badgeUserSeeder,
+      recipeIngredientSeeder,
     ];
 
     // replace this ⬇️ by customOrderSeeders
