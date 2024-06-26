@@ -88,7 +88,26 @@ const seed = async () => {
       await doRun(queue);
     };
 
-    await doRun(sortedSeeders);
+    const [
+      badgeSeeder,
+      commentSeeder,
+      ingredientSeeder,
+      labelSeeder,
+      recipeSeeder,
+      userSeeder,
+    ] = sortedSeeders;
+
+    const customOrderSeeders = [
+      userSeeder,
+      badgeSeeder,
+      recipeSeeder,
+      ingredientSeeder,
+      commentSeeder,
+      labelSeeder,
+    ];
+
+    // replace this ⬇️ by customOrderSeeders
+    await doRun(customOrderSeeders);
 
     // Close the database connection
     database.end();
