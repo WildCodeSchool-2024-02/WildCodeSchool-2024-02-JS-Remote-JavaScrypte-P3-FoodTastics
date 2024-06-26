@@ -14,7 +14,7 @@ export default function Navbar() {
       <button className="Logo" type="button" onClick={redirectionToHome}>
         <img
           className="logoImage"
-          src="../../../public/images/Logo_foodtastics.png"
+          src="/images/Logo_foodtastics.png"
           alt="logo del sitio"
         />
       </button>
