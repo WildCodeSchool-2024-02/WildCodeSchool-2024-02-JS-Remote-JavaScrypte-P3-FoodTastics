@@ -23,7 +23,7 @@ class IngredientSeeder extends AbstractSeeder {
         lipids,
         salt,
         fiber,
-        user_id
+        user_id,
       } = ingredient;
       this.insert({
         name,

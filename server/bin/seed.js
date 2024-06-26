@@ -90,20 +90,24 @@ const seed = async () => {
 
     const [
       badgeSeeder,
+      badgeUserSeeder,
       commentSeeder,
       ingredientSeeder,
       labelSeeder,
+      menuSeeder,
       recipeSeeder,
       userSeeder,
     ] = sortedSeeders;
 
     const customOrderSeeders = [
       userSeeder,
-      badgeSeeder,
-      recipeSeeder,
       ingredientSeeder,
-      commentSeeder,
+      badgeSeeder,
       labelSeeder,
+      menuSeeder,
+      recipeSeeder,
+      commentSeeder,
+      badgeUserSeeder,
     ];
 
     // replace this ⬇️ by customOrderSeeders
