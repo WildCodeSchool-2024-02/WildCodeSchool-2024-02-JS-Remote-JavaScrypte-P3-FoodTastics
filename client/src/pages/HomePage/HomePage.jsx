@@ -4,11 +4,7 @@ function HomePage() {
   return (
     <div className="homepage">
       <div className="imgcontainer">
-        <img
-          src="./src/assets/images/Accueil.jpeg"
-          alt="plat cuisiné"
-          className="image"
-        />
+        <img src="/images/Accueil.jpeg" alt="plat cuisiné" className="image" />
       </div>
       <div className="container">
         <h1 className="title">Eating Nam Nam</h1>

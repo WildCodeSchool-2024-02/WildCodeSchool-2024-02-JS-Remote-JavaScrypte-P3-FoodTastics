@@ -1,5 +1,3 @@
-const comments = require("../data/comment.json");
-
 const AbstractSeeder = require("./AbstractSeeder");
 
 class CommentSeeder extends AbstractSeeder {
@@ -8,15 +6,18 @@ class CommentSeeder extends AbstractSeeder {
   }
 
   run() {
-    for (let i = 0; i < comments.length; i += 1) {
-      const comment = comments[i];
-    
-
-      this.insert({
-       ...comment,
+    for (let i = 0; i < 5; i += 1) {
+      const fakeUser = {
+        date: new Date(),
+        description: this.faker.lorem.paragraph(),
+        is_validated: false,
+        user_id: 2,
+        recipe_id: 1,
         refName: `comment${i}`,
-    });
+      };
+
+      this.insert(fakeUser);
+    }
+  }
 }
-}
-}
-module.exports = CommentSeeder; 
+module.exports = CommentSeeder;
