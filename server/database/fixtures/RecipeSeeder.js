@@ -12,7 +12,7 @@ class RecipeSeeder extends AbstractSeeder {
       const recipe = recipes[i];
       this.insert({
         ...recipe,
-        refName: `recipe_${i}`,
+        refName: `recipe${i}`,
       });
     }
   }

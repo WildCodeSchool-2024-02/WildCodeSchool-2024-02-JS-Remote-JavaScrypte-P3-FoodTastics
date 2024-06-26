@@ -1,4 +1,3 @@
-
 const labels = require("../data/label.json");
 
 const AbstractSeeder = require("./AbstractSeeder");
@@ -11,16 +10,12 @@ class LabelSeeder extends AbstractSeeder {
   run() {
     for (let i = 0; i < labels.length; i += 1) {
       const label = labels[i];
-      const {
-        name,
-        image,
-        description
-        
-      } = label;
+      const { name, image, description } = label;
       this.insert({
         name,
         image,
-        description
+        description,
+        refName: `label${i}`,
       });
     }
   }
