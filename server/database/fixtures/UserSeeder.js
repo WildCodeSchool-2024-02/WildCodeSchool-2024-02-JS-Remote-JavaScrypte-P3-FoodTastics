@@ -1,6 +1,3 @@
-/* eslint-disable camelcase */
-const users = require("../data/users.json");
-
 const AbstractSeeder = require("./AbstractSeeder");
 
 class UserSeeder extends AbstractSeeder {
@@ -9,28 +6,19 @@ class UserSeeder extends AbstractSeeder {
   }
 
   run() {
-    for (let i = 0; i < users.length; i += 1) {
-      const user = users[i];
-      const {
-        firstname,
-        lastname,
-        password,
-        pseudo,
-        image_profile,
-        email,
-        role,
-      } = user;
+    for (let i = 0; i < 2; i += 1) {
+      const fakeUser = {
+        firstname: this.faker.person.firstName(),
+        lastname: this.faker.person.lastName(),
+        password: this.faker.internet.password(),
+        pseudo: this.faker.person.zodiacSign(),
+        image_profile: this.faker.image.avatar(),
+        email: this.faker.internet.email(),
+        role: "admin",
+        refName: `user${i}`,
+      };
 
-      this.insert({
-        firstname,
-        lastname,
-        password,
-        pseudo,
-        image_profile,
-        email,
-        role,
-        refName: `user_${i}`,
-      });
+      this.insert(fakeUser);
     }
   }
 }

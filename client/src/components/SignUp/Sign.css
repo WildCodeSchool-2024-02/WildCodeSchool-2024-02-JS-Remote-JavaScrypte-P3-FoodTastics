@@ -1,0 +1,94 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+.sign-container {
+  padding: 20px 20px 20px 20px;
+  background-color: var(--third-color);
+  border-radius: 15px;
+  border: solid 5px var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.form-sign {
+  background-color: var(--third-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.title-sign {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-sign input {
+  color: var(--main-color);
+  padding-bottom: 1rem;
+  border: none;
+  border-bottom: solid 1px;
+  margin: 0.5rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-sign {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  border-radius: 25px;
+  border: solid 1px var(--main-color);
+  padding: 0.5rem;
+  margin: 1.5rem 5rem 1.5rem 5rem;
+  font-size: 14px;
+}
+
+span {
+  color: red;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .sign-container {
+    padding: 30px;
+  }
+
+  .title-sign {
+    font-size: 1.7rem;
+  }
+
+  .form-sign input {
+    font-size: 17px;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-sign {
+    margin: 1.5rem 10rem 0 10rem;
+    font-size: 18px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .title-sign {
+    font-size: 2rem;
+  }
+
+  .form-sign input {
+    font-size: 17px;
+  }
+
+  .btn-sign {
+    margin: 1.5rem 8rem 0 8rem;
+    padding: 0.7rem;
+    font-size: 17px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
