@@ -9,15 +9,13 @@ const router = express.Router();
 const userRouter = require("./user/router");
 const commentRouter = require("./comment/router");
 const recipesRouter = require("./recipe/router");
+const ingredientRouter = require("./ingredient/router");
 
 router.use("/user", userRouter);
 router.use("/comment", commentRouter);
 router.use("/recipe", recipesRouter);
-
-
-const ingredientRouter = require("./ingredient/router");
-
 router.use("/ingredient", ingredientRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;
