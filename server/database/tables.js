@@ -1,8 +1,9 @@
 // Import the repository modules responsible for handling data operations on the tables
-const UserRepository = require("./models/UserRepository")
+const UserRepository = require("./models/UserRepository");
 const CommentRepository = require("./models/CommentRepository");
 const RecipeRepository = require("./models/RecipeRepository");
 const LabelRepository = require("./models/LabelRepository");
+const BadgeRepository = require("./models/BadgeRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -16,6 +17,8 @@ tables.user = new UserRepository();
 tables.comment = new CommentRepository();
 tables.recipe = new RecipeRepository();
 tables.label = new LabelRepository();
+
+tables.badge = new BadgeRepository();
 
 /* ************************************************************************* */
 
