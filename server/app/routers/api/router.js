@@ -7,8 +7,11 @@ const router = express.Router();
 /* ************************************************************************* */
 
 const commentRouter = require("./comment/router");
+const recipesRouter = require("./recipe/router");
 
 router.use("/comment", commentRouter);
+router.use("/recipe", recipesRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;
