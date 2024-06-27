@@ -11,7 +11,7 @@ const browse = async (req, res, next) => {
 
 const read = async (req, res, next) => {
   try {
-    const comment = await tables.comment(req.params.id);
+    const comment = await tables.comment.read(req.params.id);
 
     if (comment == null) {
       res.sendStatus(404);
