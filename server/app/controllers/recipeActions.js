@@ -2,8 +2,9 @@ const tables = require("../../database/tables");
 
 const browse = async (req, res, next) => {
   try {
-    const comments = await tables.comment.readAll();
-    res.json(comments);
+    const recipes = await tables.recipe.readAll();
+
+    res.json(recipes);
   } catch (err) {
     next(err);
   }
@@ -11,12 +12,12 @@ const browse = async (req, res, next) => {
 
 const read = async (req, res, next) => {
   try {
-    const comment = await tables.comment.read(req.params.id);
+    const recipe = await tables.recipe.read(req.params.id);
 
-    if (comment == null) {
+    if (recipe == null) {
       res.sendStatus(404);
     } else {
-      res.json(comment);
+      res.json(recipe);
     }
   } catch (err) {
     next(err);
@@ -24,9 +25,9 @@ const read = async (req, res, next) => {
 };
 
 const edit = async (req, res, next) => {
-  const comment = { ...req.body, id: req.params.id };
+  const recipe = { ...req.body, id: req.params.id };
   try {
-    await tables.comment.update(comment);
+    await tables.recipe.update(recipe);
     res.sendStatus(204);
   } catch (err) {
     next(err);
@@ -34,9 +35,10 @@ const edit = async (req, res, next) => {
 };
 
 const add = async (req, res, next) => {
-  const comment = req.body;
+  const recipe = req.body;
+
   try {
-    const insertId = await tables.comment.create(comment);
+    const insertId = await tables.recipe.create(recipe);
 
     res.status(201).json({ insertId });
   } catch (err) {
@@ -45,8 +47,10 @@ const add = async (req, res, next) => {
 };
 
 const destroy = async (req, res, next) => {
+  const { id } = req.params;
+
   try {
-    await tables.comment.delete(req.params.id);
+    await tables.recipe.delete(id);
 
     res.sendStatus(204);
   } catch (err) {
@@ -54,4 +58,10 @@ const destroy = async (req, res, next) => {
   }
 };
 
-module.exports = { browse, read, edit, add, destroy };
+module.exports = {
+  browse,
+  read,
+  edit,
+  add,
+  destroy,
+};

@@ -69,7 +69,7 @@ CREATE TABLE comment (
     user_id INT NOT NULL,
     recipe_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user (id),
-    FOREIGN KEY (recipe_id) REFERENCES recipe (id)
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE
 );
 
 CREATE TABLE user_menu_recipe (
@@ -77,7 +77,7 @@ CREATE TABLE user_menu_recipe (
     recipe_id INT NOT NULL,
     user_id INT NOT NULL,
     menu_id INT NOT NULL,
-    FOREIGN KEY (recipe_id) REFERENCES recipe (id),
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
     FOREIGN KEY (user_id) REFERENCES user (id),
     FOREIGN KEY (menu_id) REFERENCES menu (id)
 );
@@ -96,7 +96,7 @@ CREATE TABLE recipe_label (
     label_id INT NOT NULL,
     recipe_id INT NOT NULL,
     FOREIGN KEY (label_id) REFERENCES label (id),
-    FOREIGN KEY (recipe_id) REFERENCES recipe (id)
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE
 );
 
 CREATE TABLE recipe_ingredient (
@@ -104,6 +104,6 @@ CREATE TABLE recipe_ingredient (
     recipe_id INT NOT NULL,
     ingredient_id INT NOT NULL,
     quantity INT NOT NULL,
-    FOREIGN KEY (recipe_id) REFERENCES recipe (id),
+    FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
     FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
 );
