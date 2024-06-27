@@ -9,6 +9,10 @@ const router = express.Router();
 const commentRouter = require("./comment/router");
 
 router.use("/comment", commentRouter);
+
+const ingredientRouter = require("./ingredient/router");
+
+router.use("/ingredient", ingredientRouter);
 /* ************************************************************************* */
 
 module.exports = router;
