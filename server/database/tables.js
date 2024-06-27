@@ -1,5 +1,6 @@
 // Import the repository modules responsible for handling data operations on the tables
 const UserRepository = require("./models/UserRepository")
+const MenuRepository = require("./models/MenuRepository")
 const CommentRepository = require("./models/CommentRepository");
 const RecipeRepository = require("./models/RecipeRepository");
 const LabelRepository = require("./models/LabelRepository");
@@ -13,6 +14,7 @@ const tables = {};
 
 // Register each repository as data access point for its table
 tables.user = new UserRepository();
+tables.menu = new MenuRepository();
 tables.comment = new CommentRepository();
 tables.recipe = new RecipeRepository();
 tables.label = new LabelRepository();
