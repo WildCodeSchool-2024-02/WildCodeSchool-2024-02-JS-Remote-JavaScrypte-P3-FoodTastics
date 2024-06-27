@@ -36,7 +36,7 @@ class MenuRepository extends AbstractRepository {
 
   async update(menu) {
     const [result] = await this.database.query(
-      `UPDATE ${this.table} SET date = ?, WHERE id = ?`,
+      `UPDATE ${this.table} SET date = ? WHERE id = ?`,
       [menu.date, menu.id]
     );
 
