@@ -3,6 +3,7 @@ const UserRepository = require("./models/UserRepository")
 const IngredientRepository = require("./models/IngredientRepository")
 const CommentRepository = require("./models/CommentRepository");
 const RecipeRepository = require("./models/RecipeRepository");
+const LabelRepository = require("./models/LabelRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -16,6 +17,7 @@ tables.user = new UserRepository();
 tables.ingredient =new IngredientRepository();
 tables.comment = new CommentRepository();
 tables.recipe = new RecipeRepository();
+tables.label = new LabelRepository();
 
 /* ************************************************************************* */
 
