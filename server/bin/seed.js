@@ -117,7 +117,7 @@ const seed = async () => {
     ];
 
     // replace this ⬇️ by customOrderSeeders
-    await doRun(customOrderSeeders);
+    await doRun([...customOrderSeeders]);
 
     // Close the database connection
     database.end();
