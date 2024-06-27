@@ -1,6 +1,5 @@
 // Import the repository modules responsible for handling data operations on the tables
 const UserRepository = require("./models/UserRepository");
-const UserRepository = require("./models/UserRepository");
 const MenuRepository = require("./models/MenuRepository");
 const CommentRepository = require("./models/CommentRepository");
 const RecipeRepository = require("./models/RecipeRepository");
@@ -20,7 +19,6 @@ tables.menu = new MenuRepository();
 tables.comment = new CommentRepository();
 tables.recipe = new RecipeRepository();
 tables.label = new LabelRepository();
-
 tables.badge = new BadgeRepository();
 
 /* ************************************************************************* */
