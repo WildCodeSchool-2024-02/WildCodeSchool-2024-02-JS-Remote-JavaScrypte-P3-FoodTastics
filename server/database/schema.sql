@@ -79,7 +79,7 @@ CREATE TABLE user_menu_recipe (
     menu_id INT NOT NULL,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
     FOREIGN KEY (user_id) REFERENCES user (id),
-    FOREIGN KEY (menu_id) REFERENCES menu (id)
+    FOREIGN KEY (menu_id) REFERENCES menu (id) ON DELETE CASCADE
 );
 
 CREATE TABLE badge_user (
