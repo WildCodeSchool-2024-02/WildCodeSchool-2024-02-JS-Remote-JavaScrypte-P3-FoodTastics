@@ -1,0 +1,40 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-connexion {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  border: solid 1px var(--main-color);
+  border-radius: 25px;
+  font-size: 12px;
+  padding: 0.3 rem 0.5rem 0.3rem 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-connexion:hover {
+  background: var(--second-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .button-connexion {
+    font-size: 16px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .button-connexion {
+    font-size: 17px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
+}
