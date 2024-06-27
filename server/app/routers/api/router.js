@@ -8,9 +8,12 @@ const router = express.Router();
 
 const userRouter = require("./user/router");
 const commentRouter = require("./comment/router");
+const recipesRouter = require("./recipe/router");
 
 router.use("/user", userRouter);
 router.use("/comment", commentRouter);
+router.use("/recipe", recipesRouter);
+
 /* ************************************************************************* */
 
 module.exports = router;
