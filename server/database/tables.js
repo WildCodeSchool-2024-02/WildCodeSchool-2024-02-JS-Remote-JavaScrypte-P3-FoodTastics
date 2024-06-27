@@ -2,6 +2,8 @@
 const UserRepository = require("./models/UserRepository")
 const MenuRepository = require("./models/MenuRepository")
 
+const CommentRepository = require("./models/CommentRepository");
+
 // Create an empty object to hold data repositories for different tables
 const tables = {};
 
@@ -12,6 +14,8 @@ const tables = {};
 // Register each repository as data access point for its table
 tables.user = new UserRepository();
 tables.menu = new MenuRepository();
+
+tables.comment = new CommentRepository();
 
 /* ************************************************************************* */
 
