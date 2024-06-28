@@ -63,12 +63,13 @@ CREATE TABLE recipe (
 
 CREATE TABLE comment (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    date DATE NOT NULL,
+    date DATE DEFAULT "1900-01-01",
     description TEXT NOT NULL,
-    is_validated BOOLEAN,
-    user_id INT NOT NULL,
+    is_validated BOOLEAN DEFAULT FALSE,
+    user_id INT DEFAULT 1,
     recipe_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE
+    SET DEFAULT,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE
 );
 
