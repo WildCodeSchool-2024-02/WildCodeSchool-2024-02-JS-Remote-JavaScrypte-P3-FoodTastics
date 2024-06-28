@@ -14,6 +14,7 @@ const labelsRouter = require("./labels/router");
 const badgeRouter = require("./badges/router");
 const ingredientRouter = require("./ingredient/router");
 
+
 router.use("/user", userRouter);
 router.use("/menu", menuRouter);
 router.use("/comment", commentRouter);
@@ -21,6 +22,7 @@ router.use("/recipe", recipesRouter);
 router.use("/labels", labelsRouter);
 router.use("/badges", badgeRouter);
 router.use("/ingredient", ingredientRouter);
+
 
 /* ************************************************************************* */
 
