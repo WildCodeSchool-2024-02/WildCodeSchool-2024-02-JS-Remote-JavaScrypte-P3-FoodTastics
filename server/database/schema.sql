@@ -4,9 +4,9 @@ CREATE TABLE user (
     lastname VARCHAR(80) NOT NULL,
     password VARCHAR(80) NOT NULL,
     pseudo VARCHAR(80) NOT NULL,
-    image_profile TEXT NOT NULL,
+    image_profile VARCHAR(255) DEFAULT 'https://cdn.pixabay.com/photo/2017/11/06/18/30/eggplant-2924511_1280.png',
     email VARCHAR(80) NOT NULL,
-    role VARCHAR(80) NOT NULL
+    role ENUM('admin', 'user') DEFAULT 'user'
 );
 
 CREATE TABLE ingredient (
@@ -21,8 +21,9 @@ CREATE TABLE ingredient (
     lipids INT,
     salt INT,
     fiber INT,
-    user_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (id)
+    user_id INT NOT NULL DEFAULT 1,
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE
+    SET DEFAULT
 );
 
 CREATE TABLE badge (
@@ -57,7 +58,7 @@ CREATE TABLE recipe (
     is_validated BOOLEAN,
     user_id INT NOT NULL,
     badge_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE,
     FOREIGN KEY (badge_id) REFERENCES badge (id)
 );
 
@@ -68,7 +69,7 @@ CREATE TABLE comment (
     is_validated BOOLEAN,
     user_id INT NOT NULL,
     recipe_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE
 );
 
@@ -78,7 +79,7 @@ CREATE TABLE user_menu_recipe (
     user_id INT NOT NULL,
     menu_id INT NOT NULL,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
-    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE,
     FOREIGN KEY (menu_id) REFERENCES menu (id) ON DELETE CASCADE
 );
 
@@ -88,7 +89,7 @@ CREATE TABLE badge_user (
     user_id INT NOT NULL,
     date DATE NOT NULL,
     FOREIGN KEY (badge_id) REFERENCES badge (id),
-    FOREIGN KEY (user_id) REFERENCES user (id)
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE
 );
 
 CREATE TABLE recipe_label (
