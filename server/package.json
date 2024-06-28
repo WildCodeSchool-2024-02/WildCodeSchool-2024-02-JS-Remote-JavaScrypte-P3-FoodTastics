@@ -16,6 +16,7 @@
     "mysql2": "^3.6.7",
     "react-hook-form": "^7.52.0",
     "zod": "^3.23.8"
+    
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
