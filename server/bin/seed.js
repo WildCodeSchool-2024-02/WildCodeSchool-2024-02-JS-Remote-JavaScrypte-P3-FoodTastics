@@ -90,24 +90,34 @@ const seed = async () => {
 
     const [
       badgeSeeder,
+      badgeUserSeeder,
       commentSeeder,
       ingredientSeeder,
       labelSeeder,
+      menuSeeder,
+      recipeIngredientSeeder,
+      recipeLabelSeeder,
       recipeSeeder,
+      userMenuRecipeSeeder,
       userSeeder,
     ] = sortedSeeders;
 
     const customOrderSeeders = [
       userSeeder,
-      badgeSeeder,
-      recipeSeeder,
       ingredientSeeder,
-      commentSeeder,
+      badgeSeeder,
       labelSeeder,
+      menuSeeder,
+      recipeSeeder,
+      userMenuRecipeSeeder,
+      recipeLabelSeeder,
+      commentSeeder,
+      badgeUserSeeder,
+      recipeIngredientSeeder,
     ];
 
     // replace this ⬇️ by customOrderSeeders
-    await doRun(customOrderSeeders);
+    await doRun([...customOrderSeeders]);
 
     // Close the database connection
     database.end();
