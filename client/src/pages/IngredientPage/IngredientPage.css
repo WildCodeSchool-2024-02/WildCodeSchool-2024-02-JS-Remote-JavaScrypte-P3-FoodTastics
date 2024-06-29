@@ -1,0 +1,58 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/client/public/fonts/Aleo-Black.ttf");
+}
+
+.container-ingredient {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 8rem 4rem 8rem;
+}
+.img-ingredient {
+  width: 30%;
+}
+.form-ingredient {
+  font-family: "now-light";
+  color: gray;
+  display: flex;
+  flex-direction: column;
+}
+.title-ingredient {
+  font-family: "Aleo-Black";
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: gray;
+}
+
+.button-ingredient {
+  font-family: "now-light";
+  background-color: var(--second-color);
+  color: var(--third-color);
+  border: solid 1px var(--second-color);
+  border-radius: 25px;
+
+  padding: 0.3 rem 0.5rem 0.3rem 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-ingredient:hover {
+  background: var(--main-color);
+  border: var(--main-color);
+}
