@@ -13,7 +13,7 @@ CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL,
-    image TEXT NOT NULL,
+    image VARCHAR(255) DEFAULT '../../client/public/images/Logo_foodtastics.png',
     calories INT,
     proteins INT,
     carbohydrates INT,
@@ -21,9 +21,8 @@ CREATE TABLE ingredient (
     lipids INT,
     salt INT,
     fiber INT,
-    user_id INT NOT NULL DEFAULT 1,
-    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE
-    SET DEFAULT
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT
 );
 
 CREATE TABLE badge (
@@ -58,18 +57,18 @@ CREATE TABLE recipe (
     is_validated BOOLEAN,
     user_id INT NOT NULL,
     badge_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT,
     FOREIGN KEY (badge_id) REFERENCES badge (id)
 );
 
 CREATE TABLE comment (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    date DATE DEFAULT "1900-01-01",
+    date DATETIME DEFAULT CURRENT_TIMESTAMP,
     description TEXT NOT NULL,
     is_validated BOOLEAN DEFAULT FALSE,
-    user_id INT NOT NULL DEFAULT 1,
+    user_id INT NOT NULL,
     recipe_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE
 );
 
@@ -79,7 +78,7 @@ CREATE TABLE user_menu_recipe (
     user_id INT NOT NULL,
     menu_id INT NOT NULL,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
-    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT,
     FOREIGN KEY (menu_id) REFERENCES menu (id) ON DELETE CASCADE
 );
 
