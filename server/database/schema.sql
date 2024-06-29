@@ -13,7 +13,7 @@ CREATE TABLE ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     name VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL,
-    image TEXT NOT NULL,
+    image VARCHAR(255) DEFAULT '../../client/public/images/Logo_foodtastics.png',
     calories INT,
     proteins INT,
     carbohydrates INT,
