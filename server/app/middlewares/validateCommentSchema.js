@@ -3,10 +3,10 @@ const { z } = require("zod");
 const commentSchema = z.object({
   description: z
     .string({
-      invalid_type_error: "Votre date n´est pas valide",
+      invalid_type_error: "Votre description n'est pas valide",
     })
     .min(2, {
-      message: "Votre commentaire doit contenir au minimun 3 charactères",
+      message: "Votre commentaire doit contenir au minimun 2 caractères",
     }),
 });
 
