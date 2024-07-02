@@ -10,7 +10,7 @@ const {
   destroy,
 } = require("../../../controllers/commentActions");
 
-const validateCommentSchema = require("../../../middlewares/validateCommentSchema"); 
+const validateCommentSchema = require("../../../middlewares/validateCommentSchema");
 
 router.get("/", browse);
 router.get("/:id", read);
