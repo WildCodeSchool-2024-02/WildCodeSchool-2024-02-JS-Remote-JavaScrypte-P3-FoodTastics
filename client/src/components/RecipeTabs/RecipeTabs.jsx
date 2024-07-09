@@ -52,7 +52,7 @@ function RecipeTabs() {
         {filteredRecipes.map((recipe) => (
           <div key={recipe.recipe_id} className="recipe-card">
             <h3>{recipe.recipe_name}</h3>
-            <p>{recipe.recipe_description}</p>
+            <img src={recipe.recipe_image} alt={recipe.recipe_name} />
           </div>
         ))}
       </div>

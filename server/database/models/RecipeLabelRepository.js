@@ -20,8 +20,8 @@ class RecipeLabelRepository extends AbstractRepository {
         rl.id, 
         r.id AS recipe_id, 
         r.name AS recipe_name, 
-        r.description AS recipe_description, 
-        l.id AS label_id, 
+        r.image AS recipe_image, 
+        l.id AS label_id,
         l.name AS label_name
       FROM ${this.table} rl
       JOIN recipe r ON rl.recipe_id = r.id
@@ -39,7 +39,7 @@ class RecipeLabelRepository extends AbstractRepository {
         rl.id, 
         r.id AS recipe_id, 
         r.name AS recipe_name, 
-        r.description AS recipe_description, 
+        r.image AS recipe_image, 
         l.id AS label_id, 
         l.name AS label_name
       FROM ${this.table} rl

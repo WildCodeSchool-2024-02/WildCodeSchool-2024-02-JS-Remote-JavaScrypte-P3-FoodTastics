@@ -22,7 +22,6 @@ router.use("/recipe", recipesRouter);
 router.use("/labels", labelsRouter);
 router.use("/badges", badgeRouter);
 router.use("/ingredient", ingredientRouter);
-router.use("/badges", badgeRouter);
 router.use("/recipe-label", recipeLabelRouter);
 
 /* ************************************************************************* */

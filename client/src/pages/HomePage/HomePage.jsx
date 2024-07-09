@@ -7,7 +7,7 @@ function HomePage() {
       <div className="content-wrapper">
         <div className="imgcontainer">
           <img
-            src="./src/assets/images/Accueil.jpeg"
+            src="./images/Accueil.jpeg"
             alt="plat cuisiné"
             className="image"
           />
