@@ -1,10 +1,11 @@
+/* eslint-disable camelcase */
+
 const tables = require("../../database/tables");
 
 const browse = async (req, res, next) => {
   try {
-    const recipes = await tables.recipe.readAll();
-
-    res.json(recipes);
+    const recipeLabels = await tables.recipeLabel.readAll();
+    res.json(recipeLabels);
   } catch (err) {
     next(err);
   }
@@ -12,33 +13,22 @@ const browse = async (req, res, next) => {
 
 const read = async (req, res, next) => {
   try {
-    const recipe = await tables.recipe.read(req.params.id);
-
-    if (recipe == null) {
+    const recipeLabel = await tables.recipeLabel.read(req.params.id);
+    if (recipeLabel == null) {
       res.sendStatus(404);
     } else {
-      res.json(recipe);
+      res.json(recipeLabel);
     }
   } catch (err) {
     next(err);
   }
 };
 
-const edit = async (req, res, next) => {
-  const recipe = { ...req.body, id: req.params.id };
-  try {
-    await tables.recipe.update(recipe);
-    res.sendStatus(204);
-  } catch (err) {
-    next(err);
-  }
-};
-
 const add = async (req, res, next) => {
-  const recipe = req.body;
+  const { recipe_id, label_id } = req.body;
 
   try {
-    const insertId = await tables.recipe.create(recipe);
+    const insertId = await tables.recipeLabel.create(recipe_id, label_id);
 
     res.status(201).json({ insertId });
   } catch (err) {
@@ -50,8 +40,7 @@ const destroy = async (req, res, next) => {
   const { id } = req.params;
 
   try {
-    await tables.recipe.delete(id);
-
+    await tables.recipeLabel.delete(id);
     res.sendStatus(204);
   } catch (err) {
     next(err);
@@ -61,7 +50,6 @@ const destroy = async (req, res, next) => {
 module.exports = {
   browse,
   read,
-  edit,
   add,
   destroy,
 };

@@ -2,13 +2,10 @@ const AbstractRepository = require("./AbstractRepository");
 
 class MenuRepository extends AbstractRepository {
   constructor() {
-   
     super({ table: "menu" });
   }
 
-
   async create(menu) {
-    
     const [result] = await this.database.query(
       `insert into ${this.table} (date) values (?)`,
       [menu.date]
@@ -17,9 +14,7 @@ class MenuRepository extends AbstractRepository {
     return result.insertId;
   }
 
-
   async read(id) {
-
     const [rows] = await this.database.query(
       `select * from ${this.table} where id = ?`,
       [id]
@@ -52,6 +47,5 @@ class MenuRepository extends AbstractRepository {
     return result.affectedRows > 0;
   }
 }
-
 
 module.exports = MenuRepository;

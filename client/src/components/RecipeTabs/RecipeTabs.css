@@ -1,0 +1,40 @@
+.recipe-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+button.active {
+  background-color: #0e4749;
+  color: white;
+}
+
+.all-recipes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+}
