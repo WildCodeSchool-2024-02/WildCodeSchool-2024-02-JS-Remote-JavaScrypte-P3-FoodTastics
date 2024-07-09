@@ -10,9 +10,11 @@ const {
   destroy,
 } = require("../../../controllers/ingredientActions");
 
+const validateIngredientSchema = require("../../../middlewares/validateIngredientSchema");
+
 router.get("/", browse);
 router.get("/:id", read);
-router.post("/", add);
+router.post("/", validateIngredientSchema, add);
 router.put("/:id", edit);
 router.delete("/:id", destroy);
 
