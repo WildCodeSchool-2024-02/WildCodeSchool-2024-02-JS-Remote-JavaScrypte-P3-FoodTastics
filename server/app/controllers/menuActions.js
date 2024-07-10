@@ -9,7 +9,6 @@ const browse = async (req, res, next) => {
   }
 };
 
-
 const read = async (req, res, next) => {
   try {
     const menu = await tables.menu.read(req.params.id);
@@ -24,14 +23,14 @@ const read = async (req, res, next) => {
 };
 
 const edit = async (req, res, next) => {
-    const menu= { ...req.body, id: req.params.id };
-    try {
-      await tables.menu.update(menu);
-      res.sendStatus(204);
-    } catch (err) {
-      next(err);
-    }
-  };
+  const menu = { ...req.body, id: req.params.id };
+  try {
+    await tables.menu.update(menu);
+    res.sendStatus(204);
+  } catch (err) {
+    next(err);
+  }
+};
 
 const add = async (req, res, next) => {
   const menu = req.body;
@@ -45,20 +44,19 @@ const add = async (req, res, next) => {
 
 const destroy = async (req, res, next) => {
   const { id } = req.params;
-    try {
-      await tables.menu.delete(id);
-  
-      res.sendStatus(204);
-    } catch (err) {
-      next(err);
-    }
-  };
+  try {
+    await tables.menu.delete(id);
 
+    res.sendStatus(204);
+  } catch (err) {
+    next(err);
+  }
+};
 
 module.exports = {
   browse,
   read,
   edit,
   add,
-  destroy
+  destroy,
 };

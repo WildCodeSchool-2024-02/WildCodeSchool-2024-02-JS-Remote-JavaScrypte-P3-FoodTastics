@@ -5,21 +5,13 @@ const router = express.Router();
 const {
   browse,
   read,
-  edit,
   add,
   destroy,
-} = require("../../../controllers/userActions");
-
-const validateUserSchema = require("../../../middlewares/validateUserSchema");
+} = require("../../../controllers/recipeLabelActions");
 
 router.get("/", browse);
-
 router.get("/:id", read);
-
-router.put("/:id", edit);
-
-router.post("/", validateUserSchema, add);
-
+router.post("/", add);
 router.delete("/:id", destroy);
 
 module.exports = router;

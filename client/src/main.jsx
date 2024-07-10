@@ -7,6 +7,8 @@ import IngredientPage from "./pages/IngredientPage/IngredientPage";
 
 import App from "./App";
 
+const express = import.meta.env.VITE_API_URL;
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -14,6 +16,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+        loader: () => fetch(`${express}/api/recipe-label`),
       },
       {
         path: "/connexion",
