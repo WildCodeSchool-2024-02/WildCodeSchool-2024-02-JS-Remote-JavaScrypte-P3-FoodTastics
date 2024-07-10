@@ -12,7 +12,7 @@ const validateLabelSchema = require("../../../middlewares/validateLabelSchema")
 
 router.get("/",browse);
 router.get("/:id",read);
-router.post("/",add);
+
 
 router.post("/", validateLabelSchema, add);
 /* ************************************************************************* */
