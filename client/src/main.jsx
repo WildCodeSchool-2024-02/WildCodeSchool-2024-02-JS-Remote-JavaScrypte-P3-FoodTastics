@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/HomePage/HomePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
+import IngredientPage from "./pages/IngredientPage/IngredientPage";
 
 import App from "./App";
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/connexion",
         element: <ConnectionPage />,
+      },
+      {
+        path: "/ingredient",
+        element: <IngredientPage />,
       },
       {
         path: "*",
