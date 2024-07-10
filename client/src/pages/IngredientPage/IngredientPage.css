@@ -1,0 +1,123 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "now-medium";
+  src: url("../../../public/fonts/NowAlt-Medium.otf");
+}
+
+.title-ingredient {
+  font-family: "Aleo-Black";
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #0e4749;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  font-family: "now-light";
+  align-items: center;
+  color: gray;
+}
+.container-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-ingredient {
+  width: 70%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+}
+
+.img-ingredient:hover {
+  border-color: var(--main-color);
+  border-radius: 25px;
+}
+
+.form-ingredient {
+  font-family: "now-light";
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  color: var(--main-color);
+  border: transparent;
+  border-bottom: solid 1px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.error-ingredient {
+  margin-bottom: 1.2rem;
+  font-size: 0.8rem;
+}
+.input-field:hover {
+  border: solid 1px;
+  border-color: var(--second-color);
+  border-radius: 25px;
+}
+
+.button-ingredient {
+  font-family: "now-light";
+  background-color: var(--second-color);
+  color: var(--third-color);
+  border: solid 1px var(--second-color);
+  border-radius: 25px;
+  margin-top: 1rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-ingredient:hover {
+  background: var(--main-color);
+  border: var(--main-color);
+}
+@media screen and (min-width: 768px) {
+  .container-form {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 8rem 4rem 8rem;
+  }
+
+  .container-image {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: start;
+  }
+
+  .img-ingredient {
+    width: 81%;
+  }
+  .form-ingredient {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+  }
+}

@@ -42,14 +42,12 @@ class LabelRepository extends AbstractRepository {
   }
 
   // The U of CRUD - Update operation
-  
 
   // async update(item) {
   //   ...
   // }
 
   // The D of CRUD - Delete operation
-  
 
   // async delete(id) {
   //   ...
