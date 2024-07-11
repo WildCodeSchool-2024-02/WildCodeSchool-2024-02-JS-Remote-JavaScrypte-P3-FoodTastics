@@ -6,6 +6,7 @@ import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import IngredientPage from "./pages/IngredientPage/IngredientPage";
 
 import App from "./App";
+import AddRecipePage from "./pages/AddRecipePage/AddRecipePage";
 
 const express = import.meta.env.VITE_API_URL;
 
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
       {
         path: "/connexion",
         element: <ConnectionPage />,
+      },
+      {
+        path: "/ajout-recette",
+        element: <AddRecipePage />,
+        loader: () => fetch(`${express}/api/ingredient`),
       },
       {
         path: "/ingredient",
