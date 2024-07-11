@@ -22,13 +22,56 @@ class UserRepository extends AbstractRepository {
     return result.insertId;
   }
 
-  async read(id) {
+  async readBadges(id) {
     const [rows] = await this.database.query(
-      `select * from ${this.table} where id = ?`,
+      `SELECT
+        u.id AS user_id,
+        u.firstname,
+        u.lastname,
+        u.pseudo,
+        u.image_profile,
+        u.email,
+        u.role,
+        b.id AS badge_id,
+        b.name AS badge_name,
+        b.description AS badge_description,
+        b.image AS badge_image,
+        bu.date AS badge_date      
+      FROM
+        user u
+      LEFT JOIN
+        badge_user bu ON u.id = bu.user_id
+      LEFT JOIN
+        badge b ON bu.badge_id = b.id      
+      WHERE
+        u.id =?`,
       [id]
     );
 
-    return rows[0];
+    return rows;
+  }
+
+  async readMenus(id) {
+    const [rows] = await this.database.query(
+      `SELECT
+         m.id AS menu_id,
+         m.date AS menu_date,
+         r.name AS recipe_name,
+         r.image AS recipe_image
+       FROM
+         user u
+       JOIN
+         user_menu_recipe umr ON u.id = umr.user_id
+       JOIN
+         menu m ON umr.menu_id = m.id
+       JOIN
+         recipe r ON umr.recipe_id = r.id
+       WHERE
+         u.id = ?`,
+      [id]
+    );
+
+    return rows;
   }
 
   async readAll() {

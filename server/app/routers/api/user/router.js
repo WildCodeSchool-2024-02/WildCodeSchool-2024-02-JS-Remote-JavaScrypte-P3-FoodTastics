@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {
   browse,
-  read,
+  readBadgesAndMenus,
   edit,
   add,
   destroy,
@@ -14,7 +14,7 @@ const validateUserSchema = require("../../../middlewares/validateUserSchema");
 
 router.get("/", browse);
 
-router.get("/:id", read);
+router.get("/:id", readBadgesAndMenus);
 
 router.put("/:id", edit);
 
