@@ -19,7 +19,7 @@
 }
 @font-face {
   font-family: "now-medium";
-  src: url("../../../public/fonts/NowAlt-Medium.otf");
+  src: url("/fonts/NowAlt-Medium.otf");
 }
 
 .list-dashboard {
@@ -65,6 +65,21 @@
   gap: 2rem;
   font-family: "now-light";
 }
+
+.container-infos-admin {
+  background-color: var(--second-color);
+  color: var(--third-color);
+  display: flex;
+  flex-direction: row;
+  height: 10rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 1rem;
+  gap: 2rem;
+  font-family: "now-light";
+}
+
 .infos {
   display: flex;
   flex-direction: column;
@@ -92,9 +107,27 @@
   width: 9rem;
   font-size: 0.8rem;
 }
-
 .button-modify:hover {
   background: #87a3a3;
+  border: none;
+}
+
+.button-modify-admin {
+  font-family: "now-light";
+  background-color: var(--third-color);
+  color: var(--second-color);
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  width: 9rem;
+  font-size: 0.8rem;
+}
+
+.button-modify-admin:hover {
+  background: var(--main-color);
   border: none;
 }
 .container-badges-planning {
@@ -182,6 +215,12 @@
   }
 
   .container-infos {
+    height: 6rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  .container-infos-admin {
     height: 6rem;
     padding-left: 2rem;
     display: flex;

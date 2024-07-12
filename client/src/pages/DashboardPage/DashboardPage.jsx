@@ -3,9 +3,21 @@ import "./DashboardPage.css";
 import { NavLink, useLoaderData } from "react-router-dom";
 
 export default function DashboardPage() {
+  /* // Vérifier si l'utilisateur est connecté à finir
+   const connected = 
+
+ if (!connected) {
+ 
+   return  
+    
+       <h2>Vous devez être connecté pour accéder à cette page.</h2>
+}  
+   */
+
   const data = useLoaderData();
 
-  const { firstname, lastname, pseudo, image_profile, email } = data.user[0];
+  const { firstname, lastname, pseudo, image_profile, email, role } =
+    data.user[0];
   const menus = data.menu.slice(0, 7);
 
   const dailyMenus = {
@@ -38,7 +50,7 @@ export default function DashboardPage() {
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
           >
-            Mes recettes
+            {role === "user" ? "Mes recettes" : "Utilisateurs"}
           </NavLink>
         </li>
         <li>
@@ -48,7 +60,7 @@ export default function DashboardPage() {
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
           >
-            Mes favoris
+            {role === "user" ? "Mes favoris" : "Recettes"}
           </NavLink>
         </li>
         <li>
@@ -58,12 +70,16 @@ export default function DashboardPage() {
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
           >
-            Mes notifications
+            {role === "user" ? "Mes notifications" : "Commentaires"}
           </NavLink>
         </li>
       </ul>
       <div className="body-dashboard">
-        <div className="container-infos">
+        <div
+          className={
+            role === "user" ? "container-infos" : "container-infos-admin"
+          }
+        >
           <img className="img-profile" src={image_profile} alt="avatar" />
           <div className="infos">
             <div className="pseudo">
@@ -78,7 +94,12 @@ export default function DashboardPage() {
               <h2>{email}</h2>
             </div>
 
-            <NavLink to="/mesinfos/:id" className="button-modify">
+            <NavLink
+              to="/mesinfos/:id"
+              className={
+                role === "user" ? "button-modify" : "button-modify-admin"
+              }
+            >
               Modifier mon profil
             </NavLink>
           </div>
@@ -99,95 +120,19 @@ export default function DashboardPage() {
           <div className="container-planning">
             <h1 className="title-planning">Mon planning </h1>
             <div className="days">
-              <div className="day-column">
-                <div className="day-name">Lundi</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Lundi.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Lundi.recipe_name}
-                  />
+              {Object.keys(dailyMenus).map((day) => (
+                <div key={day} className="day-column">
+                  <div className="day-name">{day}</div>
+                  <div className="img-menu-container">
+                    <img
+                      src={dailyMenus[day].recipe_image}
+                      className="img-menu"
+                      alt={dailyMenus[day].recipe_name}
+                    />
+                  </div>
+                  <h3>{dailyMenus[day].recipe_name}</h3>
                 </div>
-                <h3>{dailyMenus.Lundi.recipe_name}</h3>
-              </div>
-
-              <div className="day-column">
-                <div className="day-name">Mardi</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Mardi.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Mardi.recipe_name}
-                  />
-                </div>
-                <h3>{dailyMenus.Mardi.recipe_name}</h3>
-              </div>
-
-              <div className="day-column">
-                <div className="day-name">Mercredi</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Mercredi.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Mercredi.recipe_name}
-                  />
-                </div>
-                <h3>{dailyMenus.Mercredi.recipe_name}</h3>
-              </div>
-
-              <div className="day-column">
-                <div className="day-name">Jeudi</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Jeudi.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Jeudi.recipe_name}
-                  />
-                </div>
-                <h3>{dailyMenus.Jeudi.recipe_name}</h3>
-              </div>
-
-              <div className="day-column">
-                <div className="day-name">Vendredi</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Vendredi.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Vendredi.recipe_name}
-                  />
-                </div>
-                <h3>{dailyMenus.Vendredi.recipe_name}</h3>
-              </div>
-
-              <div className="day-column">
-                <div className="day-name">Samedi</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Samedi.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Samedi.recipe_name}
-                  />
-                </div>
-                <h3>{dailyMenus.Samedi.recipe_name}</h3>
-              </div>
-              <div className="day-column">
-                <div className="day-name">Dimanche</div>
-
-                <div className="img-menu-container">
-                  <img
-                    src={dailyMenus.Dimanche.recipe_image}
-                    className="img-menu"
-                    alt={dailyMenus.Dimanche.recipe_name}
-                  />
-                </div>
-                <h3>{dailyMenus.Dimanche.recipe_name}</h3>
-              </div>
+              ))}
             </div>
           </div>
         </div>
