@@ -24,8 +24,5 @@
 @media screen and (min-width: 768px) {
   .footer-container {
     font-size: 1.2rem;
-    position: fixed;
-    left: 0;
-    bottom: 0;
   }
 }
