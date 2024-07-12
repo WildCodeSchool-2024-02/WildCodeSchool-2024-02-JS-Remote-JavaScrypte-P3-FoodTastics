@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import HomePage from "./pages/HomePage/HomePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
 import IngredientPage from "./pages/IngredientPage/IngredientPage";
-
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import App from "./App";
 import AddRecipePage from "./pages/AddRecipePage/AddRecipePage";
 
@@ -31,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: "/ingredient",
         element: <IngredientPage />,
+      },
+      {
+        path: "/dashboard/:id",
+        element: <DashboardPage />,
+        loader: ({ params }) => fetch(`${express}/api/user/${params.id}`),
       },
       {
         path: "*",
