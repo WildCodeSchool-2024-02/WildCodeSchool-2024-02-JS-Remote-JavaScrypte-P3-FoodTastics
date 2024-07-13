@@ -3,16 +3,7 @@ import "./DashboardPage.css";
 import { NavLink, useLoaderData } from "react-router-dom";
 
 export default function DashboardPage() {
-  /* // Vérifier si l'utilisateur est connecté à finir
-   const connected = 
 
- if (!connected) {
- 
-   return  
-    
-       <h2>Vous devez être connecté pour accéder à cette page.</h2>
-}  
-   */
 
   const data = useLoaderData();
 
