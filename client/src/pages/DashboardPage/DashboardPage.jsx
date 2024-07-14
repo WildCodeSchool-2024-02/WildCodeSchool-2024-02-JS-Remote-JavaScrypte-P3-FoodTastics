@@ -3,8 +3,6 @@ import "./DashboardPage.css";
 import { NavLink, useLoaderData } from "react-router-dom";
 
 export default function DashboardPage() {
-
-
   const data = useLoaderData();
 
   const { firstname, lastname, pseudo, image_profile, email, role } =
