@@ -1,9 +1,9 @@
 /* eslint-disable camelcase */
 import "./DashboardPage.css";
 import { NavLink, useLoaderData } from "react-router-dom";
+import BackButton from "../../components/BackButton/BackButton";
 
 export default function DashboardPage() {
-
 
   const data = useLoaderData();
 
@@ -23,6 +23,7 @@ export default function DashboardPage() {
 
   return (
     <>
+      <BackButton />
       <ul className="list-dashboard">
         <li>
           <NavLink
