@@ -10,10 +10,12 @@ const {
   destroy,
 } = require("../../../controllers/badgeActions");
 
-router.post("/", create);
+const validateBadgeSchema = require("../../../middlewares/validateBadgeSchema");
+
 router.get("/", readAll);
 router.get("/:id", read);
 router.put("/:id", update);
+router.post("/", validateBadgeSchema, create);
 router.delete("/:id", destroy);
 
 module.exports = router;
