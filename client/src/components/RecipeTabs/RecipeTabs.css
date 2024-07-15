@@ -143,4 +143,17 @@
     color: #0e4749;
     margin-bottom: 10px;
   }
+
+  .buttonDetails {
+    font-family: "NowAlt-Medium";
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 14px;
+    color: white;
+    background-color: #e88d67;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 }
