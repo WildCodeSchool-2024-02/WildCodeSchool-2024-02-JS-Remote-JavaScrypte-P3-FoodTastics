@@ -16,9 +16,18 @@ const read = async (req, res, next) => {
 
     if (recipe == null) {
       res.sendStatus(404);
-    } else {
-      res.json(recipe);
     }
+    const recipeIngredients = await tables.recipe.readIngredients(
+      req.params.id
+    );
+    if (recipeIngredients == null) {
+      res.sendStatus(404);
+    }
+    const data = {
+      recipe,
+      recipeIngredients,
+    };
+    res.json(data);
   } catch (err) {
     next(err);
   }

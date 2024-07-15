@@ -5,6 +5,7 @@ import "./IngredientPage.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BackButton from "../../components/BackButton/BackButton";
 
 export default function IngredientPage() {
   const {
@@ -41,6 +42,7 @@ export default function IngredientPage() {
   };
   return (
     <>
+      <BackButton />
       <h1 className="title-ingredient">Ajouter votre ingrédient</h1>
 
       <form className="container-form" onSubmit={handleSubmit(onSubmit)}>

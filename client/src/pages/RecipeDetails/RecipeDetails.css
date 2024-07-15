@@ -1,0 +1,155 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.recipeName {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #0e4749;
+}
+
+.numberPeople {
+  border: 2px solid #e88d67;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 10px 0;
+  display: inline-block;
+  float: right;
+  color: #0e4749;
+}
+
+.recipeImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.planning,
+.favoris {
+  border: 2px solid #e88d67;
+  border-radius: 15px;
+  background-color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 10px 0;
+  display: inline-block;
+  float: right;
+  color: #0e4749;
+}
+
+.lineContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ingredientTitle {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+  color: #0e4749;
+}
+
+.customLine {
+  height: 1px;
+  width: 10cm;
+  background-color: black;
+  margin-top: 32px;
+}
+
+.ingredientContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.ingredientItem {
+}
+
+.ingredientImage {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ingredientName {
+  margin-top: 5px;
+}
+
+.recipeTitle {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+  color: #0e4749;
+}
+
+.recipeDescription {
+  text-align: justify;
+}
+
+.authorTitle {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+  color: #0e4749;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.post,
+.text {
+  text-align: center;
+  font-size: 15px;
+  color: #0e4749;
+}
+
+.avisTitle {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+  color: #0e4749;
+}
+
+.comment-box {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 80px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background-image: linear-gradient(
+    to right,
+    rgba(240, 240, 240, 0.9),
+    rgba(240, 240, 240, 0.3)
+  );
+  color: #0e4749;
+}

@@ -8,6 +8,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Autosuggest from "react-autosuggest";
+import BackButton from "../../components/BackButton/BackButton";
 
 export default function AddRecipePage() {
   const ingredientsData = useLoaderData();
@@ -98,136 +99,150 @@ export default function AddRecipePage() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="connectionForm">
-      <div className="recipeTopContainer">
-        <input
-          type="text"
-          className="recipeName"
-          name="name"
-          placeholder="Écrivez le nom de votre recette"
-          {...register("name", {
-            required: "Le nom de la recette est obligatoire",
-            pattern: {
-              value: /^[a-zA-Z\s]*$/,
-              message: "Le nom de la recette ne doit contenir que des lettres",
-            },
-          })}
-        />
-        {errors.name && (
-          <span className="recipeCreationError">{errors.name.message}</span>
-        )}
+    <div>
+      <BackButton />
+      <div>
+        <form onSubmit={handleSubmit(onSubmit)} className="connectionForm">
+          <div className="recipeTopContainer">
+            <input
+              type="text"
+              className="recipeName"
+              name="name"
+              placeholder="Écrivez le nom de votre recette"
+              {...register("name", {
+                required: "Le nom de la recette est obligatoire",
+                pattern: {
+                  value: /^[a-zA-Z\s]*$/,
+                  message:
+                    "Le nom de la recette ne doit contenir que des lettres",
+                },
+              })}
+            />
+            {errors.name && (
+              <span className="recipeCreationError">{errors.name.message}</span>
+            )}
 
-        <img className="recipeImage" src="images/add_img.png" alt="Ajouter" />
-        <input
-          type="url"
-          name="image"
-          className="recipeImageLink"
-          placeholder="Saisissez l'url de l'image"
-          {...register("image", {
-            required: "L'URL de l'image est obligatoire",
-            pattern: {
-              value: /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/,
-              message: "Veuillez entrer une URL valide",
-            },
-          })}
-        />
-        {errors.image && (
-          <span className="recipeCreationError">{errors.image.message}</span>
-        )}
+            <img
+              className="recipeImage"
+              src="images/add_img.png"
+              alt="Ajouter"
+            />
+            <input
+              type="url"
+              name="image"
+              className="recipeImageLink"
+              placeholder="Saisissez l'url de l'image"
+              {...register("image", {
+                required: "L'URL de l'image est obligatoire",
+                pattern: {
+                  value: /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/,
+                  message: "Veuillez entrer une URL valide",
+                },
+              })}
+            />
+            {errors.image && (
+              <span className="recipeCreationError">
+                {errors.image.message}
+              </span>
+            )}
+          </div>
+          <div className="recipeSecondaryInfo">
+            <input
+              type="text"
+              className="numberOfPeople"
+              name="number_of_people"
+              placeholder="Nombre de personnes"
+              {...register("number_of_people", {
+                required: "Le nombre de personnes est obligatoire",
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message:
+                    "Le nombre de personnes ne doit contenir que des chiffres",
+                },
+              })}
+            />
+            {errors.number_of_people && (
+              <span className="recipeCreationError">
+                {errors.number_of_people.message}
+              </span>
+            )}
+            <input
+              type="text"
+              className="preparationTime"
+              name="set_up_time"
+              placeholder="Temps de préparation (en minutes)"
+              {...register("set_up_time", {
+                required: "Le temps de préparation est obligatoire",
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message:
+                    "Le temps de préparation ne doit contenir que des chiffres",
+                },
+              })}
+            />
+            {errors.set_up_time && (
+              <span className="recipeCreationError">
+                {errors.set_up_time.message}
+              </span>
+            )}
+          </div>
+          <div className="autosuggest">
+            <div className="autosuggestInteraction">
+              <Autosuggest
+                suggestions={suggestions}
+                onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+                onSuggestionsClearRequested={onSuggestionsClearRequested}
+                getSuggestionValue={getSuggestionValue}
+                renderSuggestion={renderSuggestion}
+                inputProps={inputProps}
+                onSuggestionSelected={eventEnter}
+              />
+              <NavLink to="/ingredient" className="newIngredient">
+                {" "}
+                Créez un ingrédient s'il n'existe pas
+              </NavLink>
+            </div>
+            <p>Ingrédients ajoutés :</p>
+            <ul>
+              {ingredientsSelected.map((ingredient) => (
+                <li key={ingredient.id}>
+                  {ingredient.name}
+                  <button
+                    type="button"
+                    className="removeIngredient"
+                    onClick={() => removeIngredient(ingredient)}
+                  >
+                    ✖
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="recipeDescriptionContainer">
+            <label htmlFor="recipeDescription">
+              Description de votre recette
+            </label>
+            <textarea
+              name="description"
+              className="recipeDescription"
+              placeholder="Décrivez ici le déroulé de votre recette"
+              rows="5"
+              cols="33"
+              {...register("description", {
+                required: "Une description est obligatoire",
+              })}
+            />
+            {errors.description && (
+              <span className="recipeCreationError">
+                {errors.description.message}
+              </span>
+            )}
+            <button className="recipeSubmit" type="submit">
+              Ajoutez votre recette
+            </button>
+          </div>
+        </form>
       </div>
-      <div className="recipeSecondaryInfo">
-        <input
-          type="text"
-          className="numberOfPeople"
-          name="number_of_people"
-          placeholder="Nombre de personnes"
-          {...register("number_of_people", {
-            required: "Le nombre de personnes est obligatoire",
-            pattern: {
-              value: /^[0-9]+$/,
-              message:
-                "Le nombre de personnes ne doit contenir que des chiffres",
-            },
-          })}
-        />
-        {errors.number_of_people && (
-          <span className="recipeCreationError">
-            {errors.number_of_people.message}
-          </span>
-        )}
-        <input
-          type="text"
-          className="preparationTime"
-          name="set_up_time"
-          placeholder="Temps de préparation (en minutes)"
-          {...register("set_up_time", {
-            required: "Le temps de préparation est obligatoire",
-            pattern: {
-              value: /^[0-9]+$/,
-              message:
-                "Le temps de préparation ne doit contenir que des chiffres",
-            },
-          })}
-        />
-        {errors.set_up_time && (
-          <span className="recipeCreationError">
-            {errors.set_up_time.message}
-          </span>
-        )}
-      </div>
-      <div className="autosuggest">
-        <div className="autosuggestInteraction">
-          <Autosuggest
-            suggestions={suggestions}
-            onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-            onSuggestionsClearRequested={onSuggestionsClearRequested}
-            getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSuggestion}
-            inputProps={inputProps}
-            onSuggestionSelected={eventEnter}
-          />
-          <NavLink to="/ingredient" className="newIngredient">
-            {" "}
-            Créez un ingrédient s'il n'existe pas
-          </NavLink>
-        </div>
-        <p>Ingrédients ajoutés :</p>
-        <ul>
-          {ingredientsSelected.map((ingredient) => (
-            <li key={ingredient.id}>
-              {ingredient.name}
-              <button
-                type="button"
-                className="removeIngredient"
-                onClick={() => removeIngredient(ingredient)}
-              >
-                ✖
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="recipeDescriptionContainer">
-        <label htmlFor="recipeDescription">Description de votre recette</label>
-        <textarea
-          name="description"
-          className="recipeDescription"
-          placeholder="Décrivez ici le déroulé de votre recette"
-          rows="5"
-          cols="33"
-          {...register("description", {
-            required: "Une description est obligatoire",
-          })}
-        />
-        {errors.description && (
-          <span className="recipeCreationError">
-            {errors.description.message}
-          </span>
-        )}
-        <button className="recipeSubmit" type="submit">
-          Ajoutez votre recette
-        </button>
-      </div>
-    </form>
+    </div>
   );
 }
