@@ -73,7 +73,7 @@ class RecipeRepository extends AbstractRepository {
 
   async readAll() {
     const [rows] = await this.database.query(
-      `select id, name, numer_of_people, description, image, date, is_favorite, vote, set_up_time, is_validated, user_id, badge_id from ${this.table}`
+      `select id, name, number_of_people, description, image, date, is_favorite, vote, set_up_time, is_validated, user_id, badge_id from ${this.table}`
     );
 
     return rows;

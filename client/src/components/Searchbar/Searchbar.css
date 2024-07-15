@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  position: relative;
+}
+
+#searchbar {
+  border: 2px solid #0e4749;
+  border-radius: 20px;
+  padding-left: 0.5rem;
+  width: 100%;
+  height: 2rem;
+}
+
+.resultsContainer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 30svh;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffffc;
+  z-index: 100;
+}
+
+.resultsContainer.hasResults {
+  display: flex;
+  border: 1px solid #0e4749;
+}
+
+.resultLink {
+  color: #0e4749;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-family: "now-light";
+}
+
+.resultLink:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
