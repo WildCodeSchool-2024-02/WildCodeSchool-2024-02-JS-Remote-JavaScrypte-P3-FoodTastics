@@ -5,53 +5,68 @@ const { encodeJWT, decodeJWT } = require("../helpers/jwtHelpers");
 
 const login = async (req, res) => {
   const { email, password } = req.body;
+
   const [user] = await tables.user.findUserByEmail(email);
-  console.info(user);
+
   if (!user) {
     return res.status(404).json({
-      message: "Email and password do not match",
+      message: "Le couple email/mot de passe est incorrect",
     });
   }
 
-  const verified = await argon2.verify(user.password, password);
+  const isAllowed = await argon2.verify(user.password, password);
 
-  if (!verified) {
+  if (!isAllowed) {
     return res.status(404).json({
-      message: "Email and password do not match",
+      message: "Le couple email/mot de passe est incorrect",
     });
   }
 
   delete user.password;
 
-  const token = encodeJWT(user);
+  const token = await encodeJWT(user);
   return res
     .status(200)
-    .cookie("auth_token", token, { httpOnly: true, secure: false })
-    .json({ user, token });
+    .cookie("auth_token", token, {
+      secure: false,
+      httpOnly: true,
+      maxAge: 3600000,
+    })
+    .json({
+      user,
+      token,
+    });
+};
+
+const logout = (req, res) => {
+  res.clearCookie("auth_token").sendStatus(200);
 };
 
 const checkAuth = async (req, res) => {
   const token = req.cookies?.auth_token;
+
+
   if (!token) {
     return res.status(403).json(null);
   }
+
   try {
+   
     const validToken = await decodeJWT(token);
+
     return res
       .status(200)
       .cookie("auth_token", token, {
         secure: false,
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000,
+        maxAge: 360000,
       })
-      .json({ user: validToken });
+      .json({
+        user: validToken,
+      });
   } catch (e) {
     return console.error(e);
   }
-};
-
-const logout = (req, res) => {
-  res.clearCookie("auth").sendStatus(200);
 };
 
 module.exports = { login, logout, checkAuth };

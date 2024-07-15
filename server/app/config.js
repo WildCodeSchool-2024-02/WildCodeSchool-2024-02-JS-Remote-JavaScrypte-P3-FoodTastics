@@ -32,6 +32,7 @@ app.use(
     origin: [
       process.env.CLIENT_URL, // keep this one, after checking the value in `server/.env`
     ],
+    credentials: true,
   })
 );
 
