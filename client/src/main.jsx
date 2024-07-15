@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/HomePage/HomePage";
 import ConnectionPage from "./pages/ConnectionPage/ConnectionPage";
+import RecipeDetails from "./pages/RecipeDetails/RecipeDetails";
 import IngredientPage from "./pages/IngredientPage/IngredientPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import App from "./App";
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
         loader: () => fetch(`${express}/api/recipe-label`),
+      },
+      {
+        path: "details/:id",
+        element: <RecipeDetails />,
+        loader: ({ params }) => fetch(`${express}/api/recipe/${params.id}`),
       },
       {
         path: "/connexion",
