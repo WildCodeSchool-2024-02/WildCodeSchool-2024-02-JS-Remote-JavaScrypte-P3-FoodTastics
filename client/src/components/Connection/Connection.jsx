@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading  */
 import axios from "axios";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import "./Connection.css";
 import { useForm } from "react-hook-form";
 
 export default function Connection() {
   const { setCurrentUser } = useOutletContext();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -21,6 +22,8 @@ export default function Connection() {
         withCredentials: true,
       });
       setCurrentUser(response.data.user);
+
+      navigate(`/`);
     } catch (e) {
       console.error(e);
     }

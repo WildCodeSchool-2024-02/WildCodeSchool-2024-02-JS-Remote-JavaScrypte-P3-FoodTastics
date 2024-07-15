@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.css";
 
-function Menu() {
+function Menu({ currentUser }) {
   const [showLinks, setShowLinks] = useState(false);
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
@@ -32,13 +33,23 @@ function Menu() {
         </li>
 
         <li className="navbarItem">
-          <NavLink
-            to="/conection"
-            className="navbarLink"
-            onClick={handleShowLinks}
-          >
-            Connexion
-          </NavLink>
+          {currentUser ? (
+            <NavLink
+              to={`/dashboard/${currentUser.id}`}
+              className="navbarLink"
+              onClick={handleShowLinks}
+            >
+              Mon compte
+            </NavLink>
+          ) : (
+            <NavLink
+              to="/connexion"
+              className="navbarLink"
+              onClick={handleShowLinks}
+            >
+              Connexion
+            </NavLink>
+          )}
         </li>
       </ul>
       <button
@@ -52,4 +63,16 @@ function Menu() {
     </div>
   );
 }
+
+Menu.defaultProps = {
+  currentUser: null,
+};
+
+Menu.propTypes = {
+  currentUser: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }),
+};
+
 export default Menu;

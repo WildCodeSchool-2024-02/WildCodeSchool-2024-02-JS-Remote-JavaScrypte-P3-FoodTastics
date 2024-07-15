@@ -45,13 +45,11 @@ const logout = (req, res) => {
 const checkAuth = async (req, res) => {
   const token = req.cookies?.auth_token;
 
-
   if (!token) {
     return res.status(403).json(null);
   }
 
   try {
-   
     const validToken = await decodeJWT(token);
 
     return res

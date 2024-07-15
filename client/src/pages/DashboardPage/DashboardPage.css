@@ -1,6 +1,6 @@
 :root {
   --main-color: #e88d67;
-  --second-color: #0e4749;
+  --second-color: #0b3b3c;
   --third-color: white;
 }
 
@@ -137,12 +137,27 @@
   font-family: "Aleo-Black";
   color: var(--second-color);
 }
+
 .container-badges {
   background-color: var(--main-color);
   border-radius: 1rem;
   text-align: center;
   align-content: center;
   height: 10rem;
+}
+.container-dash-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Aleo-Black";
+}
+.container-admin {
+  background-color: var(--main-color);
+  border-radius: 1rem;
+  text-align: center;
+  align-content: center;
+  height: 10rem;
+  color: var(--second-color);
 }
 
 .img-badge {
@@ -253,6 +268,24 @@
     align-items: center;
     justify-content: center;
     padding: 3rem 1rem;
+  }
+
+  .container-dash-admin {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-family: "Aleo-Black";
+    color: var(--second-color);
+    padding-bottom: 1rem;
+  }
+  .container-admin {
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    text-align: center;
+    align-content: center;
+    height: 10rem;
+    height: 19rem;
+    width: 30%;
   }
   .days {
     display: flex;

@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import fetchAuth from "./lib/auth";
+import "./App.css";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -26,8 +27,12 @@ function App() {
         theme="colored"
         transition:Bounce
       />
-      <Navbar />
-      <p> BONJOUR {currentUser?.firstname}</p>
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      {currentUser ? (
+        <p className="hello">Bonjour {currentUser.firstname} !</p>
+      ) : (
+        ""
+      )}
       <Outlet context={{ currentUser, setCurrentUser }} />
       <Footer />
     </div>
