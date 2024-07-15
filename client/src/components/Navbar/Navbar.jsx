@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import ButtonConnection from "../ButtonConnection/ButtonConnection";
 import "./Navbar.css";
+import Searchbar from "../Searchbar/Searchbar";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ export default function Navbar() {
         </button>
         <Menu />
       </div>
+      <Searchbar />
       <ButtonConnection />
     </div>
   );

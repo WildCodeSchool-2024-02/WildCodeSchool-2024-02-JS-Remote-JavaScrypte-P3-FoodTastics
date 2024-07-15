@@ -4,7 +4,6 @@ import { NavLink, useLoaderData } from "react-router-dom";
 import BackButton from "../../components/BackButton/BackButton";
 
 export default function DashboardPage() {
-
   const data = useLoaderData();
 
   const { firstname, lastname, pseudo, image_profile, email, role } =
