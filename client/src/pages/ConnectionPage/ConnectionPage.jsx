@@ -1,5 +1,5 @@
 import "./ConnectionPage.css";
-import Connection from "../../components/Connection/Connexion";
+import Connection from "../../components/Connection/Connection";
 import Sign from "../../components/SignUp/Sign";
 
 export default function ConnectionPage() {

@@ -1,10 +1,11 @@
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import ButtonConnection from "../ButtonConnection/ButtonConnection";
 import "./Navbar.css";
 import Searchbar from "../Searchbar/Searchbar";
 
-export default function Navbar() {
+export default function Navbar({ currentUser, setCurrentUser }) {
   const navigate = useNavigate();
 
   const redirectionToHome = () => {
@@ -21,10 +22,25 @@ export default function Navbar() {
             alt="logo del sitio"
           />
         </button>
-        <Menu />
+        <Menu currentUser={currentUser} setcurrentUser={setCurrentUser} />
       </div>
       <Searchbar />
       <ButtonConnection />
     </div>
   );
 }
+Navbar.defaultProps = {
+  currentUser: null,
+  setCurrentUser: null,
+};
+
+Navbar.propTypes = {
+  currentUser: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }),
+  setCurrentUser: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }),
+};

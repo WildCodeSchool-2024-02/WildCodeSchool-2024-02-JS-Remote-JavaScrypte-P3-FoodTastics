@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "";
-  src: url("");
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
 }
 
 .menu {
@@ -41,7 +41,7 @@
 .navbarLink {
   display: block;
   text-decoration: none;
-  font-family: "";
+  font-family: "now-light";
   margin: 2em 0;
   font-size: 2rem;
   color: #fffffc;
