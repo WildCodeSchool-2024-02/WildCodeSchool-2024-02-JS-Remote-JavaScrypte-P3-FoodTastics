@@ -1,0 +1,41 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+.btn-dec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-deconnexion {
+  background-color: var(--second-color);
+  color: var(--third-color);
+  border: solid 1px var(--second-color);
+  border-radius: 25px;
+  font-size: 12px;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-deconnexion:hover {
+  background: var(--main-color);
+  border: #e88d67;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .button-deconnexion {
+    font-size: 16px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .button-deconnexion {
+    font-size: 17px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
+}
