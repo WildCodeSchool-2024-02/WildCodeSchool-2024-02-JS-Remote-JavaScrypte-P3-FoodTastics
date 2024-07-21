@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap");
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Aleo", serif;
+  background-color: #ffffff;
+}
+
+.conditions-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 50px;
+  margin: 30px;
+}
+
+.conditions-container {
+  padding: 20px;
+  border: 4px solid #0e4749;
+  border-radius: 15px;
+  width: 1300px;
+  background-color: #f0f0f0;
+}
+
+.conditions-title {
+  color: #0e4749;
+  padding: 10px;
+  text-align: center;
+}
+
+.conditions-content {
+  padding: 20px;
+  color: #333;
+  line-height: 1.8;
+}

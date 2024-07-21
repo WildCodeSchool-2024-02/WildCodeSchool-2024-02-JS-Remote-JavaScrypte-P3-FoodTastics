@@ -9,6 +9,8 @@ import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import App from "./App";
 import AddRecipePage from "./pages/AddRecipePage/AddRecipePage";
 import LogOutPage from "./pages/LogOutPage/LogOutPage";
+import ConditionsPage from "./pages/ConditionsPage/ConditionsPage";
+import AboutPage from "./pages/AboutPage/AboutPage";
 
 const express = import.meta.env.VITE_API_URL;
 
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
         path: "/dashboard/:id",
         element: <DashboardPage />,
         loader: ({ params }) => fetch(`${express}/api/user/${params.id}`),
+      },
+      {
+        path: "/conditionsgénérales",
+        element: <ConditionsPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
       },
       {
         path: "*",
