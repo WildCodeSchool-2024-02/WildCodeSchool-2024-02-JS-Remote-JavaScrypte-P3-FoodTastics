@@ -1,17 +1,20 @@
 const { z } = require("zod");
 
-const userRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,32}$/;
+const userRegex =
+  /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,200}$/;
+
+const emailRegex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
 
 const userSchema = z.object({
   firstname: z
     .string({
-      invalid_type_error: "Le prénom de votre format n’est pas valide",
+      invalid_type_error: "Le format de votre prénom n’est pas valide",
     })
     .min(2, {
       message: "votre prénom doit contenir au minimum 2 caractères",
     })
     .max(20, {
-      message: "votre prénom doit contenir au minimum 20 caractères",
+      message: "votre prénom doit contenir au maximum 20 caractères",
     }),
   lastname: z
     .string({
@@ -21,21 +24,26 @@ const userSchema = z.object({
       message: "Votre nom doit contenir au minimum 2 caractères",
     })
     .max(20, {
-      message: "Votre nom doit contenir au minimum 20 caractères",
+      message: "Votre nom doit contenir au maximum 20 caractères",
     }),
-  password: z.string().regex(userRegex, {
-    message:
-      "Votre mot de passe doit contenir, un chiffre, une lettre majuscule et un caractère spécial",
-  }),
+  password: z
+    .string()
+    .regex(userRegex, {
+      message:
+        "Votre mot de passe doit contenir, un chiffre, une lettre majuscule et un caractère spécial",
+    })
+    .min(8, {
+      message: "Votre nom doit contenir au minimum 8 caractères",
+    }),
   pseudo: z
     .string({
-      invalid_type_error: "Votre prénom doit contenir au minimum 2 caractères",
+      invalid_type_error: "Le format de votre pseudo n’est pas valide",
     })
-    .max(20, {
-      message: "Votre prénom doit contenir au minimum 20 caractères",
+    .min(2, {
+      message: "Votre prénom doit contenir au minimum 2 caractères",
     }),
-  email: z.string().email({
-    invalid_type_error: "Votre adresse mail n’est pas valide",
+  email: z.string().regex(emailRegex, {
+    message: "votre mail n'a pas le bon format",
   }),
 });
 

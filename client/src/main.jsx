@@ -8,6 +8,7 @@ import IngredientPage from "./pages/IngredientPage/IngredientPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import App from "./App";
 import AddRecipePage from "./pages/AddRecipePage/AddRecipePage";
+import LogOutPage from "./pages/LogOutPage/LogOutPage";
 
 const express = import.meta.env.VITE_API_URL;
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/connexion",
         element: <ConnectionPage />,
+      },
+      {
+        path: "/deconnexion",
+        element: <LogOutPage />,
       },
       {
         path: "/ajout-recette",
