@@ -22,7 +22,7 @@ export default function Navbar({ currentUser, setCurrentUser }) {
             alt="logo del sitio"
           />
         </button>
-        <Menu currentUser={currentUser} setcurrentUser={setCurrentUser} />
+        <Menu currentUser={currentUser} setCurrentUser={setCurrentUser} />
       </div>
       <Searchbar />
       <ButtonConnection />
