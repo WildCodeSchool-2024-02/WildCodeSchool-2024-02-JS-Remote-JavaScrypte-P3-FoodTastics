@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Aleo", serif;
+  background-color: #ffffff;
+}
+
+.conditions-container {
+  padding: 15px;
+  border: 3px solid #0e4749;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #f0f0f0;
+  margin: 7rem auto;
+  box-sizing: border-box;
+}
+
+.conditions-title {
+  color: #0e4749;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.conditions-content {
+  padding: 10px;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.9em;
+}
+
+.conditions-content h2 {
+  color: #0e4749;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+@media (max-width: 767px) {
+  .conditions-container {
+    width: 95%;
+    padding: 10px;
+    border-width: 2px;
+  }
+
+  .conditions-title {
+    font-size: 1.4em;
+    padding: 5px;
+  }
+
+  .conditions-content {
+    padding: 8px;
+    font-size: 0.8em;
+    line-height: 1.4;
+  }
+
+  .conditions-content h2 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .conditions-container {
+    width: 90%;
+    padding: 15px;
+    border-width: 3px;
+  }
+
+  .conditions-title {
+    font-size: 1.6em;
+    padding: 10px;
+  }
+
+  .conditions-content {
+    padding: 10px;
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+
+  .conditions-content h2 {
+    font-size: 1.1em;
+  }
+}
