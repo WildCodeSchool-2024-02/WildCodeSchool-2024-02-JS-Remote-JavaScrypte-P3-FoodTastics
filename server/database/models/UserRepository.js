@@ -31,6 +31,7 @@ class UserRepository extends AbstractRepository {
         u.pseudo,
         u.image_profile,
         u.email,
+        u.password,
         u.role,
         b.id AS badge_id,
         b.name AS badge_name,
