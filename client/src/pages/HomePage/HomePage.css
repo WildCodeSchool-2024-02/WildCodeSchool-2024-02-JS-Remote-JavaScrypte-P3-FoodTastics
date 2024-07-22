@@ -1,98 +1,103 @@
 @font-face {
   font-family: "Aleo-Black";
-  src: url("/client/public/fonts/Aleo-Black.ttf");
+  src: url("/fonts/Aleo-Black.ttf");
 }
 @font-face {
   font-family: "NowAlt-Medium";
-  src: url("/client/public/fonts/NowAlt-Medium.otf");
+  src: url("/fonts/NowAlt-Medium.otf");
 }
 
-@media screen and (max-width: 767px) {
-  .homepage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fffffc;
-    padding-top: 100px;
-  }
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffffc;
+  padding-top: 100px;
+}
 
-  .imgcontainer {
-    display: flex;
-    max-width: 180px;
-    height: 100%;
-    margin-right: 100px;
-    margin-left: 100px;
-    margin: 0 auto 20px;
-    border: 3px solid #0e4749;
-    border-radius: 15px;
-    box-shadow:
-      -5px 5px 0px 0px #0e4749,
-      -10px 10px 0px 0px rgba(14, 71, 73, 0.8),
-      -15px 15px 0px 0px rgba(14, 71, 73, 0.6),
-      -20px 20px 0px 0px rgba(14, 71, 73, 0.4);
-  }
+.imgcontainer {
+  display: flex;
+  max-width: 180px;
+  height: 100%;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin: 0 auto 20px;
+  border: 3px solid #0e4749;
+  border-radius: 15px;
+  box-shadow:
+    -5px 5px 0px 0px #0e4749,
+    -10px 10px 0px 0px rgba(14, 71, 73, 0.8),
+    -15px 15px 0px 0px rgba(14, 71, 73, 0.6),
+    -20px 20px 0px 0px rgba(14, 71, 73, 0.4);
+}
 
-  .image {
-    max-width: 100%;
-    border-radius: 15px;
-  }
+.hero-image {
+  max-width: 100%;
+  border-radius: 15px;
+}
 
-  .container {
-    max-width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-  }
+.hero-header-container {
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
 
-  .title {
-    font-family: "Aleo-Black";
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: #0e4749;
-  }
+.hero-title {
+  font-family: "Aleo-Black";
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #0e4749;
+}
 
-  .text {
-    margin-bottom: 20px;
-    font-family: "NowAlt-Mediun";
-    font-size: 1.5rem;
-    color: #0e4749;
-  }
+.hero-baseline {
+  margin-bottom: 20px;
+  font-family: "NowAlt-Medium";
+  font-size: 1.5rem;
+  color: #0e4749;
+}
 
-  .button {
-    font-family: "NowAlt-Mediun";
-    padding: 10px 20px;
-    font-size: 14px;
-    color: white;
-    background-color: #0e4749;
-    border: none;
-    border-radius: 45px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.hero-button {
+  font-family: "NowAlt-Medium";
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #0e4749;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .button:hover {
-    background-color: #e88d67;
-  }
+.button:hover {
+  background-color: #e88d67;
+}
 
-  .recipe {
-    font-family: "Aleo-Black";
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #0e4749;
-  }
+.recipe {
+  font-family: "Aleo-Black";
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #0e4749;
 }
 
 @media screen and (min-width: 768px) {
   .homepage {
     display: flex;
     align-items: center;
-    height: 100vh;
     background-color: #fffffc;
     padding-top: 50px;
+  }
+
+  .hero-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70svw;
+    height: 86svh;
   }
 
   .imgcontainer {
@@ -107,35 +112,30 @@
       -20px 20px 0px 0px rgba(14, 71, 73, 0.4);
   }
 
-  .image {
-    max-width: 280px;
-    border-radius: 15px;
-  }
-
-  .container {
+  .hero-header-container {
     text-align: center;
     padding: 20px;
     background-color: #fff;
-    margin-bottom: 20px;
+    margin: 0;
   }
 
-  .title {
+  .hero-title {
     font-family: "Aleo-Black";
     margin-bottom: 10px;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: #0e4749;
   }
 
-  .text {
-    font-family: "NowAlt-Mediun";
+  .hero-baseline {
+    font-family: "NowAlt-Medium";
     margin-bottom: 20px;
     font-family: "Now";
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #0e4749;
   }
 
-  .button {
-    font-family: "NowAlt-Mediun";
+  .hero-button {
+    font-family: "NowAlt-Medium";
     padding: 12px 24px;
     font-size: 16px;
     color: white;
@@ -146,7 +146,7 @@
     transition: background-color 0.3s ease;
   }
 
-  .button:hover {
+  .hero-button:hover {
     background-color: #e88d67;
   }
 

@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 40%;
   position: relative;
 }
 
@@ -50,4 +50,10 @@
 .resultLink:hover {
   text-decoration: underline;
   font-weight: bolder;
+}
+
+@media screen and (min-width: 768px) {
+  .searchbar {
+    width: 30%;
+  }
 }
