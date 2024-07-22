@@ -2,13 +2,26 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Menu.css";
+import axios from "axios";
 
-function Menu({ currentUser }) {
+function Menu({ currentUser, setCurrentUser }) {
   const [showLinks, setShowLinks] = useState(false);
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
+  const handleLogout = async () => {
+    try {
+      await axios.get("http://localhost:3310/api/auth/logout", {
+        withCredentials: true,
+      });
 
+      setShowLinks(false);
+
+      setCurrentUser(null);
+    } catch (e) {
+      console.error(e);
+    }
+  };
   return (
     <div className={`menu ${showLinks ? "active" : "inactive"} `}>
       <ul className="navbarList">
@@ -19,11 +32,11 @@ function Menu({ currentUser }) {
         </li>
         <li className="navbarItem">
           <NavLink
-            to="/contact"
+            to={currentUser ? `/dashboard/${currentUser.id}` : "/"}
             className="navbarLink"
             onClick={handleShowLinks}
           >
-            Contact
+            Mon compte
           </NavLink>
         </li>
         <li className="navbarItem">
@@ -34,13 +47,9 @@ function Menu({ currentUser }) {
 
         <li className="navbarItem">
           {currentUser ? (
-            <NavLink
-              to={`/dashboard/${currentUser.id}`}
-              className="navbarLink"
-              onClick={handleShowLinks}
-            >
-              Mon compte
-            </NavLink>
+            <button type="button" className="navbarLink" onClick={handleLogout}>
+              Déconnexion
+            </button>
           ) : (
             <NavLink
               to="/connexion"
@@ -64,15 +73,18 @@ function Menu({ currentUser }) {
   );
 }
 
-Menu.defaultProps = {
-  currentUser: null,
-};
-
 Menu.propTypes = {
   currentUser: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
   }),
+  setCurrentUser: PropTypes.func,
+};
+
+Menu.defaultProps = {
+  currentUser: null,
+  setCurrentUser: () => {},
 };
 
 export default Menu;

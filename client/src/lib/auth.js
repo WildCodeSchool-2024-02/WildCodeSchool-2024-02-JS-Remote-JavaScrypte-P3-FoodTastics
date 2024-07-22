@@ -3,7 +3,7 @@ import axios from "axios";
 const fetchAuth = async () => {
   try {
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/auth/login`,
+      `${import.meta.env.VITE_API_URL}/api/auth/checkAuth`,
       {
         withCredentials: true,
       }
