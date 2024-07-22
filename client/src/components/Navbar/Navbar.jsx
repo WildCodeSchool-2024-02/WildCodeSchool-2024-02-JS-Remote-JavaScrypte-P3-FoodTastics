@@ -13,11 +13,15 @@ export default function Navbar({ currentUser, setCurrentUser }) {
   };
 
   return (
-    <div className="Navbar">
+    <div className="navbar">
       <div className="menu-logo">
-        <button className="Logo" type="button" onClick={redirectionToHome}>
+        <button
+          className="logo-button"
+          type="button"
+          onClick={redirectionToHome}
+        >
           <img
-            className="logoImage"
+            className="logo-image"
             src="/images/Logo_foodtastics.png"
             alt="logo del sitio"
           />

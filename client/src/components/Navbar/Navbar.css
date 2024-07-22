@@ -1,30 +1,38 @@
-.Navbar {
-  margin: auto;
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #fffffc;
   height: 5em;
   width: 100%;
-  gap: 1rem;
+  padding-right: 0.5rem;
 }
 
 .menu-logo {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 }
 
-.Logo {
+.logo-button {
   display: flex;
   height: 6em;
   align-items: center;
   border: none;
   background-color: transparent;
-  margin-right: 1rem;
+  cursor: pointer;
 }
 
-.logoImage {
-  height: 6em;
+.logo-image {
+  height: 4rem;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding-right: 1rem;
+  }
+
+  .logo-image {
+    height: 6rem;
+  }
 }
