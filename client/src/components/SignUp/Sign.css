@@ -4,12 +4,26 @@
   --third-color: white;
 }
 
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "now-medium";
+  src: url("../../../public/fonts/NowAlt-Medium.otf");
+}
+
 .sign-container {
   padding: 20px 20px 20px 20px;
   background-color: var(--third-color);
   border-radius: 15px;
   border: solid 5px var(--main-color);
   margin-bottom: 1.5rem;
+  font-family: "now-medium";
 }
 
 .form-sign {
@@ -20,6 +34,7 @@
 
 .title-sign {
   color: var(--main-color);
+  font-family: "Aleo-Black";
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 2rem;
@@ -30,7 +45,7 @@
   padding-bottom: 1rem;
   border: none;
   border-bottom: solid 1px;
-  margin: 0.5rem;
+  margin: 0.5rem 0.2rem 1rem 0.2rem;
   font-size: 15px;
   cursor: pointer;
 }
@@ -45,8 +60,14 @@
   font-size: 14px;
 }
 
-span {
+.error {
   color: red;
+  margin-bottom: 0.7rem;
+}
+
+.label-sign {
+  color: var(--main-color);
+  margin-top: 0.1rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -75,16 +96,16 @@ span {
 
 @media screen and (min-width: 1201px) {
   .title-sign {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .form-sign input {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .btn-sign {
     margin: 1.5rem 8rem 0 8rem;
-    padding: 0.7rem;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
     font-size: 17px;
   }
 
