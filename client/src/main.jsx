@@ -34,10 +34,7 @@ const router = createBrowserRouter([
         path: "/connexion",
         element: <ConnectionPage />,
       },
-   /*    {
-        path: "/deconnexion",
-        element: <LogOutPage />,
-      }, */
+
       {
         path: "/ajout-recette",
         element: <AddRecipePage />,
@@ -69,11 +66,6 @@ const router = createBrowserRouter([
         loader: () => fetch(`${express}/api/recipe`),
       },
 
-      /* {
-        path: "/admin/recipes/modif/:id",
-        element: <ModifRecipePage />,
-        loader: ({ params }) => fetch(`${express}/api/recipe/${params.id}`),
-      },  */
       {
         path: "*",
         element: <h1>Page not found</h1>,
