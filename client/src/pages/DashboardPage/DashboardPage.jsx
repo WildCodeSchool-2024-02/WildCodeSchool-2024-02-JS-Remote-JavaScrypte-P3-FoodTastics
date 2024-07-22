@@ -15,7 +15,7 @@ export default function DashboardPage() {
   const data = useLoaderData();
   const navigate = useNavigate();
 
-  const { firstname, lastname, pseudo, image_profile, email, role } =
+  const { firstname, lastname, pseudo, image_profile, email, role, user_id } =
     data.user[0];
   const menus = data.menu.slice(0, 7);
 
@@ -124,7 +124,10 @@ export default function DashboardPage() {
                 <h2>{email}</h2>
               </div>
 
-              <NavLink to="/mesinfos/:id" className="button-modify">
+              <NavLink
+                to={`/admin/users/modif/${user_id}`}
+                className="button-modify"
+              >
                 Modifier mon profil
               </NavLink>
             </div>
@@ -182,7 +185,7 @@ export default function DashboardPage() {
         </li>
         <li>
           <NavLink
-            to="/recipes"
+            to="/admin/users"
             className={({ isActive }) =>
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
@@ -192,7 +195,7 @@ export default function DashboardPage() {
         </li>
         <li>
           <NavLink
-            to="/favourites"
+            to="/admin/recipes"
             className={({ isActive }) =>
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
@@ -202,7 +205,7 @@ export default function DashboardPage() {
         </li>
         <li>
           <NavLink
-            to=""
+            to="/admin/ingredients"
             className={({ isActive }) =>
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
@@ -212,7 +215,7 @@ export default function DashboardPage() {
         </li>
         <li>
           <NavLink
-            to="/notifications"
+            to="/admin/commentaires"
             className={({ isActive }) =>
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
@@ -223,7 +226,7 @@ export default function DashboardPage() {
       </ul>
       <div className="body-dashboard">
         <div className="container-infos-admin">
-          <img className="img-profile" src={image_profile} alt="avatar" />
+          <img className="image-profile" src={image_profile} alt="avatar" />
           <div className="infos">
             <div className="pseudo">
               <h2>{pseudo}</h2>
@@ -238,7 +241,7 @@ export default function DashboardPage() {
             </div>
 
             <NavLink
-              to="/mesinfos/:id"
+              to={`/admin/users/modif/${user_id}`}
               className={
                 role === "user" ? "button-modify" : "button-modify-admin"
               }
@@ -248,17 +251,23 @@ export default function DashboardPage() {
           </div>
         </div>
         <div className="container-dash-admin">
-          <div className="container-admin">
+          <NavLink to="/admin/users" className="container-admin">
             <h1>Utilisateurs</h1>
+          </NavLink>
+          <div className="container-admin">
+            <NavLink to="/admin/recipes" className="container-admin">
+              <h1>Recettes</h1>
+            </NavLink>
           </div>
           <div className="container-admin">
-            <h1>Recettes</h1>
+            <NavLink to="/admin/ingredients" className="container-admin">
+              <h1>Ingredients</h1>
+            </NavLink>
           </div>
           <div className="container-admin">
-            <h1>Ingredients</h1>
-          </div>{" "}
-          <div className="container-admin">
-            <h1>Commentaires</h1>
+            <NavLink to="/admin/users" className="container-admin">
+              <h1>Commentaires</h1>
+            </NavLink>
           </div>
         </div>
       </div>

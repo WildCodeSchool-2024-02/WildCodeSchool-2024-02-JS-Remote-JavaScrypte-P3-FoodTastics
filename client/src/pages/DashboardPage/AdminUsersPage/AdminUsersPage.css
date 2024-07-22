@@ -1,0 +1,157 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0b3b3c;
+  --third-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "now-medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
+.links-dashboard-active {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  font-family: "Aleo-Black";
+  text-align: center;
+  font-size: 0.7rem;
+}
+.links-dashboard {
+  color: #87a3a3;
+  text-decoration: none;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+.users-container-ad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "now-light";
+  color: var(--second-color);
+  gap: 1rem;
+}
+.card-user-ad {
+  background-color: transparent;
+  border-radius: 5px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-img-container-ad {
+  margin: 0;
+  text-align: end;
+  border-radius: 5px;
+}
+.card-image-ad {
+  width: 15%;
+}
+
+.card-label-ad {
+  padding: 0rem 0.5rem;
+  font-weight: bold;
+}
+
+.card-input-ad {
+  width: 40%;
+  color: gray;
+  border: none;
+}
+.card-prenom-nom-ad {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card-pseudo-ad {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card-email-ad {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+.card-password-ad {
+  display: flex;
+  flex-direction: row;
+}
+.card-role-ad {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-label-input-url-ad {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-card-container-ad {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.card-id-ad {
+  color: var(--second-color);
+  text-align: end;
+  font-weight: bold;
+}
+.btn-card-ad {
+  background-color: var(--main-color);
+  color: black;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "now-medium";
+}
+
+.btn-card-ad:hover {
+  color: white;
+  background-color: var(--second-color);
+}
+
+@media screen and (min-width: 768px) {
+  .users-container-ad {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    padding: 1rem;
+  }
+
+  .card-user-ad {
+    width: 20%;
+    height: 18rem;
+    font-size: 0.9rem;
+  }
+
+  .links-dashboard-active {
+    font-size: 2rem;
+  }
+  .links-dashboard {
+    color: #87a3a3;
+    text-decoration: none;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
