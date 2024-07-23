@@ -38,7 +38,7 @@ function HomePage() {
       </div>
 
       <div className="recipe">
-        <h1>Les dernières recettes</h1>
+        <h1>Découvrez les 10 dernières recettes postées :</h1>
         <RecipeTabs />
       </div>
     </div>
