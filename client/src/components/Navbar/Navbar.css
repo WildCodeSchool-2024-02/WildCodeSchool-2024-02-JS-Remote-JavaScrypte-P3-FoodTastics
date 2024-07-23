@@ -25,6 +25,7 @@
 .logo-image {
   height: 4rem;
   margin: 0;
+  margin-left: 6rem;
 }
 
 @media screen and (min-width: 768px) {

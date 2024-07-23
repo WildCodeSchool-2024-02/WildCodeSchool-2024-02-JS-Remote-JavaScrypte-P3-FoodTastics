@@ -80,9 +80,9 @@ const router = createBrowserRouter([
         loader: () => fetch(`${express}/api/ingredient`),
       },
       {
-      path: "/admin/ingredient/modif/:id",
-      element: <ModifIngredientPage />,
-      loader: ({ params }) => fetch(`${express}/api/ingredient/${params.id}`),
+        path: "/admin/ingredient/modif/:id",
+        element: <ModifIngredientPage />,
+        loader: ({ params }) => fetch(`${express}/api/ingredient/${params.id}`),
       },
       {
         path: "*",
