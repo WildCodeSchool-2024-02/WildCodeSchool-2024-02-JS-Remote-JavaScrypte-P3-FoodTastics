@@ -239,7 +239,11 @@ export default function DashboardPage() {
       </ul>
       <div className="body-dashboard">
         <div className="container-infos-admin">
-          <img className="image-profile" src={image_profile} alt="avatar" />
+          <img
+            className="image-profile-admin"
+            src={image_profile}
+            alt="avatar"
+          />
           <div className="infos">
             <div className="pseudo">
               <h2>{pseudo}</h2>
