@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading  */
 import axios from "axios";
 import { useOutletContext, useNavigate } from "react-router-dom";
-import "./Connection.css";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import "./Connection.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Connection() {
   const { setCurrentUser } = useOutletContext();
@@ -21,11 +23,13 @@ export default function Connection() {
       const response = await axios.post(`${express}/api/auth/login`, data, {
         withCredentials: true,
       });
+      toast.success("Vous êtes connecté(e) !");
       setCurrentUser(response.data.user);
 
       navigate(`/`);
     } catch (e) {
       console.error(e);
+      toast.error("Une erreur es survenue, veuillez réessayer ultérieurement");
     }
   };
 
