@@ -5,6 +5,10 @@
   outline: none;
 }
 
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
 body {
   margin: 0;
 }
@@ -13,4 +17,11 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.hello {
+  font-family: "now-light";
+  margin: 1rem;
+  color: #0e4749;
+  font-weight: bold;
 }

@@ -4,21 +4,22 @@ const router = express.Router();
 
 const {
   browse,
-  read,
+  readBadgesAndMenus,
   edit,
   add,
   destroy,
 } = require("../../../controllers/userActions");
 
 const validateUserSchema = require("../../../middlewares/validateUserSchema");
+const hashPassword = require("../../../services/hashPassword");
 
 router.get("/", browse);
 
-router.get("/:id", read);
+router.get("/:id", readBadgesAndMenus);
 
 router.put("/:id", edit);
 
-router.post("/", validateUserSchema, add);
+router.post("/register", validateUserSchema, hashPassword, add);
 
 router.delete("/:id", destroy);
 

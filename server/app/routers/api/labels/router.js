@@ -8,9 +8,12 @@ const router = express.Router();
 
 const { browse, read, add } = require("../../../controllers/labelActions");
 
+const validateLabelSchema = require("../../../middlewares/validateLabelSchema");
+
 router.get("/", browse);
 router.get("/:id", read);
-router.post("/", add);
+
+router.post("/", validateLabelSchema, add);
 /* ************************************************************************* */
 
 module.exports = router;

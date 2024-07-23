@@ -1,19 +1,49 @@
 /* eslint-disable react/jsx-props-no-spreading */
-
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./IngredientPage.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate, useOutletContext } from "react-router-dom";
+import BackButton from "../../components/BackButton/BackButton";
 
 export default function IngredientPage() {
+  const navigate = useNavigate();
+  const { currentUser } = useOutletContext();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const userId = 1;
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/auth/checkauth`,
+          {
+            withCredentials: true,
+          }
+        );
+        const authenticatedUser = response.data.user;
+        if (!authenticatedUser || authenticatedUser.id !== currentUser.id) {
+          navigate("/connexion");
+        }
+      } catch (e) {
+        console.error(e);
+        navigate("connexion");
+      }
+    };
+
+    checkAuth();
+  }, [currentUser, navigate]);
+
+  if (!currentUser) {
+    return navigate("/connexion");
+  }
+
+  const userId = currentUser.id;
   const onSubmit = async (formData) => {
     const data = { ...formData };
 
@@ -41,6 +71,7 @@ export default function IngredientPage() {
   };
   return (
     <>
+      <BackButton />
       <h1 className="title-ingredient">Ajouter votre ingrédient</h1>
 
       <form className="container-form" onSubmit={handleSubmit(onSubmit)}>

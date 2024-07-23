@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./RecipeTabs.css";
 
@@ -9,7 +9,9 @@ function RecipeTabs() {
   const [latestRecipes, setLatestRecipes] = useState([]);
 
   useEffect(() => {
-    const sortedRecipes = [...recipeLabelData].sort((a, b) => new Date(b.recipe_date) - new Date(a.recipe_date));
+    const sortedRecipes = [...recipeLabelData].sort(
+      (a, b) => new Date(b.recipe_date) - new Date(a.recipe_date)
+    );
     setLatestRecipes(sortedRecipes.slice(0, 10));
   }, [recipeLabelData]);
 
@@ -55,12 +57,18 @@ function RecipeTabs() {
         </button>
       </div>
       <div className="all-recipes">
-        {filteredRecipes.map((recipe) => (
-          <div key={recipe.recipe_id} className="recipe-card">
-            <h3>{recipe.recipe_name}</h3>
-            <img src={recipe.recipe_image} alt={recipe.recipe_name} />
-          </div>
-        ))}
+        {filteredRecipes &&
+          filteredRecipes.map((recipe) => (
+            <div key={recipe.recipe_id} className="recipe-card">
+              <h3>{recipe.recipe_name}</h3>
+              <img src={recipe.recipe_image} alt={recipe.recipe_name} />
+              <Link to={`/details/${recipe.recipe_id}`}>
+                <button type="button" className="buttonDetails">
+                  Details
+                </button>
+              </Link>
+            </div>
+          ))}
       </div>
     </div>
   );
