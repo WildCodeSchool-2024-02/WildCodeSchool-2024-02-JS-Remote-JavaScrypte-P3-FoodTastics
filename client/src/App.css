@@ -4,6 +4,10 @@
   padding: 0;
   outline: none;
 }
+@font-face {
+  font-family: "NowAlt-Medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
 
 @font-face {
   font-family: "now-light";
@@ -20,8 +24,9 @@ ul {
 }
 
 .hello {
-  font-family: "now-light";
+  font-family: "now-medium";
   margin: 1rem;
   color: #0e4749;
   font-weight: bold;
+  text-align: center;
 }

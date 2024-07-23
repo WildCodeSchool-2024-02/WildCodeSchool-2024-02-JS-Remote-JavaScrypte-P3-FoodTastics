@@ -74,6 +74,7 @@
 
 .button:hover {
   background-color: #e88d67;
+  color: black;
 }
 
 .recipe {
@@ -148,6 +149,7 @@
 
   .hero-button:hover {
     background-color: #e88d67;
+    color: black;
   }
 
   .recipe {

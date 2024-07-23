@@ -194,9 +194,6 @@ export default function ModifUserPage() {
               Modifier
             </button>
           </div>
-          <div className="card-id">
-            <p>{user_id}</p>
-          </div>
         </form>
       </div>
     </>

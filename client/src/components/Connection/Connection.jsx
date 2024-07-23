@@ -46,7 +46,7 @@ export default function Connection() {
         <input
           className="email-connection"
           type="email"
-          placeholder="Insérez votre e-mail"
+          placeholder="Insérer votre e-mail"
           name="email"
           {...register("email", {
             required: "L'email est obligatoire",

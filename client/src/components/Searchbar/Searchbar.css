@@ -18,6 +18,7 @@
   padding-left: 0.5rem;
   width: 100%;
   height: 2rem;
+  font-size: 12px;
 }
 
 .resultsContainer {
@@ -55,5 +56,9 @@
 @media screen and (min-width: 768px) {
   .searchbar {
     width: 30%;
+  }
+
+  #searchbar {
+    font-size: 14px;
   }
 }

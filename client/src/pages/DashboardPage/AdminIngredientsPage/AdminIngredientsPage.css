@@ -32,7 +32,13 @@
   background-color: var(--main-color);
   color: black;
   border-radius: 1rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 14px;
+}
+
+.high-page-ingredient {
+  display: flex;
+  align-items: center;
 }
 
 .btn-add-ingredient:hover {
@@ -80,7 +86,6 @@
 .img-ingre-ad {
   border-radius: 1rem;
   width: 98%;
-  heigth: 5rem;
 }
 
 .ingredient-infos {
@@ -129,5 +134,17 @@
   .ingredient-card-ad:hover {
     height: 29rem;
     width: 17%;
+  }
+
+  .btn-add-ingredient {
+    padding: 0.5rem 0.5rem;
+    font-size: 16px;
+    margin-right: 3rem;
+  }
+
+  .high-page-ingredient {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

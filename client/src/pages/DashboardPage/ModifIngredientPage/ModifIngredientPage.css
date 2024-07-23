@@ -89,7 +89,7 @@
 }
 
 .button-ingredient-ad {
-  font-family: "now-light";
+  font-family: "now-medium";
   background-color: var(--second-color);
   color: var(--third-color);
   border: solid 1px var(--second-color);
@@ -103,6 +103,7 @@
 .button-ingredient-ad:hover {
   background: var(--main-color);
   border: var(--main-color);
+  color: black;
 }
 
 .btn-ingredient-delete {
@@ -145,8 +146,8 @@
     width: 50%;
   }
   .btn-ingredient-delete {
-    margin: 0rem 0rem 2rem 56rem;
-    width: 36rem;
+    margin: 0rem 0rem 2rem 40.5rem;
+    width: 25rem;
   }
   .btn-delete-container {
     width: 100%;

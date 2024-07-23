@@ -42,10 +42,13 @@ export default function AdminIngredientsPage() {
 
   return (
     <div className="ingredients-body">
-      <BackButton />
-      <NavLink to="/ingredient" className="btn-add-ingredient">
-        Ajouter un nouvel ingrédient
-      </NavLink>
+      <div className="high-page-ingredient">
+        <BackButton />
+        <NavLink to="/ingredient" className="btn-add-ingredient">
+          Ajouter un nouvel ingrédient
+        </NavLink>
+      </div>
+
       <ul className="list-dashboard">
         <li>
           <NavLink
@@ -115,10 +118,6 @@ export default function AdminIngredientsPage() {
               <div className="emoji-info">
                 <p className="emoji-calories">🔋</p>{" "}
                 <p>Calories : {i.calories}</p>
-              </div>
-              <div className="emoji-info">
-                <p className="emoji"> 👨‍🍳</p>{" "}
-                <p>Postée par (id): {i.user_id} </p>
               </div>
             </div>
             <NavLink to={`/admin/ingredient/modif/${i.id}`}>

@@ -12,7 +12,7 @@ export default function Footer() {
         Nous contacter
       </NavLink>
       <NavLink to="/conditionsgenerales" className="footer-link">
-        Conditions Générales d'Utilisation
+        Conditions Générales
       </NavLink>
     </div>
   );
