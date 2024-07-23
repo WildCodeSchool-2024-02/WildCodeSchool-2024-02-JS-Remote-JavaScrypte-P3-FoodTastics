@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import AdminUsersPage from "./pages/DashboardPage/AdminUsersPage/AdminUsersPage";
 import ModifUserPage from "./pages/DashboardPage/ModifUserPage/ModifUserPage";
 import AdminRecipesPage from "./pages/DashboardPage/AdminRecipesPage/AdminRecipesPage";
+import ModifRecipePage from "./pages/DashboardPage/ModifRecipePage/ModifRecipePage";
 
 const express = import.meta.env.VITE_API_URL;
 
@@ -72,6 +73,12 @@ const router = createBrowserRouter([
         path: "/admin/recipes",
         element: <AdminRecipesPage />,
         loader: () => fetch(`${express}/api/recipe`),
+      },
+
+      {
+        path: "/admin/recipes/modif/:id",
+        element: <ModifRecipePage />,
+        loader: ({ params }) => fetch(`${express}/api/recipe/${params.id}`),
       },
 
       {
