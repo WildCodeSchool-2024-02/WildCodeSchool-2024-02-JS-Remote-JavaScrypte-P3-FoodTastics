@@ -93,6 +93,11 @@
   height: 5rem;
   border-radius: 5px;
 }
+
+.image-profile-admin {
+  height: 5rem;
+  border-radius: 5px;
+}
 .pseudo {
   font-size: 1rem;
   font-family: "Aleo-Black";
