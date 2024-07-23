@@ -31,7 +31,11 @@ function RecipeDetails() {
         <button type="button" className="numberPeople">
           Nombre de personne : {recipe_number_of_people}
         </button>
-        <img className="recipeImage" src={recipe_image} alt={recipe_name} />
+        <img
+          className="recipeDetailImage"
+          src={recipe_image}
+          alt={recipe_name}
+        />
 
         <div className="buttonContainer">
           <button type="button" className="planning">

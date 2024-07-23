@@ -13,6 +13,7 @@ import "./DashboardPage.css";
 
 export default function DashboardPage() {
   const data = useLoaderData();
+
   const navigate = useNavigate();
 
   const { firstname, lastname, pseudo, image_profile, email, role, user_id } =
@@ -20,13 +21,13 @@ export default function DashboardPage() {
   const menus = data.menu.slice(0, 7);
 
   const dailyMenus = {
-    Lundi: menus[0],
-    Mardi: menus[1],
-    Mercredi: menus[2],
-    Jeudi: menus[3],
-    Vendredi: menus[4],
-    Samedi: menus[5],
-    Dimanche: menus[6],
+    Lundi: menus[0] || {},
+    Mardi: menus[1] || {},
+    Mercredi: menus[2] || {},
+    Jeudi: menus[3] || {},
+    Vendredi: menus[4] || {},
+    Samedi: menus[5] || {},
+    Dimanche: menus[6] || {},
   };
 
   const { currentUser } = useOutletContext();
@@ -110,7 +111,11 @@ export default function DashboardPage() {
               role === "user" ? "container-infos" : "container-infos-admin"
             }
           >
-            <img className="img-profile" src={image_profile} alt="avatar" />
+            <img
+              className="img-profile-user"
+              src={image_profile}
+              alt="avatar"
+            />
             <div className="infos">
               <div className="pseudo">
                 <h2>{pseudo}</h2>
@@ -135,15 +140,19 @@ export default function DashboardPage() {
           <div className="container-badges-planning">
             <div className="container-badges">
               <h1>Mes badges</h1>
-              {data.user.map((u) => (
-                <img
-                  key={u.id}
-                  src={u.badge_image}
-                  alt={u.badge_description}
-                  title={`${u.badge_name} - ${u.badge_description}`}
-                  className="img-badge"
-                />
-              ))}
+              {data.user.badge_id ? (
+                data.user.map((u) => (
+                  <img
+                    key={u.id}
+                    src={u.badge_image}
+                    alt={u.badge_description}
+                    title={`${u.badge_name} - ${u.badge_description}`}
+                    className="img-badge"
+                  />
+                ))
+              ) : (
+                <p>Aucun badge disponible</p>
+              )}
             </div>
             <div className="container-planning">
               <h1 className="title-planning">Mon planning </h1>
@@ -152,13 +161,17 @@ export default function DashboardPage() {
                   <div key={day} className="day-column">
                     <div className="day-name">{day}</div>
                     <div className="img-menu-container">
-                      <img
-                        src={dailyMenus[day].recipe_image}
-                        className="img-menu"
-                        alt={dailyMenus[day].recipe_name}
-                      />
+                      {dailyMenus[day].recipe_image ? (
+                        <img
+                          src={dailyMenus[day].recipe_image}
+                          className="img-menu"
+                          alt={dailyMenus[day].recipe_name}
+                        />
+                      ) : (
+                        <p>Aucun menu</p>
+                      )}
                     </div>
-                    <h3>{dailyMenus[day].recipe_name}</h3>
+                    <h3>{dailyMenus[day].recipe_name || ""}</h3>
                   </div>
                 ))}
               </div>
@@ -226,7 +239,11 @@ export default function DashboardPage() {
       </ul>
       <div className="body-dashboard">
         <div className="container-infos-admin">
-          <img className="image-profile" src={image_profile} alt="avatar" />
+          <img
+            className="image-profile-admin"
+            src={image_profile}
+            alt="avatar"
+          />
           <div className="infos">
             <div className="pseudo">
               <h2>{pseudo}</h2>
