@@ -29,7 +29,7 @@ export default function Connection() {
       navigate(`/`);
     } catch (e) {
       console.error(e);
-      toast.error("Une erreur es survenue, veuillez réessayer ultérieurement");
+      toast.error("Une erreur est survenue, veuillez réessayer ultérieurement");
     }
   };
 

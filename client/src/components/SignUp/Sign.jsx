@@ -26,7 +26,7 @@ export default function Sign() {
       toast.success("Vous êtes bien inscrit(e) !");
     } catch (e) {
       console.error(e.response.data);
-      toast.error("Une erreur es survenue, veuillez réessayer ultérieurement");
+      toast.error("Une erreur est survenue, veuillez réessayer ultérieurement");
     }
   };
 
