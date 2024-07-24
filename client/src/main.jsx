@@ -15,6 +15,7 @@ import ModifUserPage from "./pages/DashboardPage/ModifUserPage/ModifUserPage";
 import AdminRecipesPage from "./pages/DashboardPage/AdminRecipesPage/AdminRecipesPage";
 import AdminIngredientsPage from "./pages/DashboardPage/AdminIngredientsPage/AdminIngredientsPage";
 import ModifIngredientPage from "./pages/DashboardPage/ModifIngredientPage/ModifIngredientPage";
+import UserRecipesPage from "./pages/DashboardPage/UserRecipesPage/UserRecipesPage";
 
 const express = import.meta.env.VITE_API_URL;
 
@@ -80,10 +81,17 @@ const router = createBrowserRouter([
         loader: () => fetch(`${express}/api/ingredient`),
       },
       {
-      path: "/admin/ingredient/modif/:id",
-      element: <ModifIngredientPage />,
-      loader: ({ params }) => fetch(`${express}/api/ingredient/${params.id}`),
+        path: "/admin/ingredient/modif/:id",
+        element: <ModifIngredientPage />,
+        loader: ({ params }) => fetch(`${express}/api/ingredient/${params.id}`),
       },
+
+      {
+        path: "/user/recipes/:id",
+        element: <UserRecipesPage />,
+        loader: ({ params }) => fetch(`${express}/api/user/${params.id}`),
+      },
+
       {
         path: "*",
         element: <h1>Page not found</h1>,

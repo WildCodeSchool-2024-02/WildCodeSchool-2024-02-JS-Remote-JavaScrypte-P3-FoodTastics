@@ -26,7 +26,7 @@ class RecipeRepository extends AbstractRepository {
     return result.insertId;
   }
 
-  async read(id) {
+  async readRecipeUser(id) {
     const [rows] = await this.database.query(
       `SELECT 
         r.id, 
@@ -64,6 +64,33 @@ class RecipeRepository extends AbstractRepository {
       FROM recipe r
       JOIN recipe_ingredient ri ON ri.recipe_id = r.id
       JOIN ingredient i ON ri.ingredient_id= i.id
+      WHERE r.id = ?`,
+      [recipeId]
+    );
+
+    return rows;
+  }
+
+  async readRecipeIngredients(recipeId) {
+    const [rows] = await this.database.query(
+      `SELECT 
+        r.id AS recipe_id,
+        r.name AS recipe_name,
+        r.description AS recipe_description,
+        r.number_of_people,
+        r.image AS recipe_image,
+        r.date AS recipe_date,
+        r.is_favorite,
+        r.vote,
+        r.set_up_time,
+        r.is_validated,
+        i.id AS ingredient_id,
+        i.name AS ingredient_name,
+        i.image AS ingredient_image,
+        ri.quantity AS ingredient_quantity
+      FROM recipe r
+      JOIN recipe_ingredient ri ON ri.recipe_id = r.id
+      JOIN ingredient i ON ri.ingredient_id = i.id
       WHERE r.id = ?`,
       [recipeId]
     );

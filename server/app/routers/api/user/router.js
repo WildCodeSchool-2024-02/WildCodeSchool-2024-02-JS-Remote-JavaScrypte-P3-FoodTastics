@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {
   browse,
-  readBadgesAndMenus,
+  read,
   edit,
   add,
   destroy,
@@ -15,9 +15,9 @@ const hashPassword = require("../../../services/hashPassword");
 
 router.get("/", browse);
 
-router.get("/:id", readBadgesAndMenus);
+router.get("/:id", read);
 
-router.put("/:id", edit);
+router.put("/:id", hashPassword, edit);
 
 router.post("/register", validateUserSchema, hashPassword, add);
 
