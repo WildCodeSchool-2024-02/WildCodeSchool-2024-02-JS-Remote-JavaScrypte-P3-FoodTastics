@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "now-medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
+body {
+  margin: 0;
+  font-family: "Aleo", serif;
+  background-color: #ffffff;
+}
+
+.commentaire-container {
+  margin-bottom: 15rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #f0f0f0;
+}
+
+.commentaire-title {
+  text-align: center;
+  padding: 3rem;
+  border: solid 3px #0e4749;
+
+  border-radius: 10px;
+  font-family: "now-medium";
+  font-size: 18px;
+  color: #0e4749;
+}
+
+.commentaire {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .commentaire-container {
+    margin-bottom: 19rem;
+    margin-top: 5rem;
+    margin-right: 6rem;
+    margin-left: 6rem;
+    background-color: #f0f0f0;
+  }
+
+  .commentaire-title {
+    text-align: center;
+    padding: 3rem;
+    border: solid 3px #0e4749;
+    border-radius: 10px;
+    font-family: "now-medium";
+    font-size: 18px;
+    color: #0e4749;
+  }
+
+  .commentaire {
+    margin-top: 2rem;
+  }
+}
