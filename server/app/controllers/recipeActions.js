@@ -44,13 +44,20 @@ const edit = async (req, res, next) => {
 };
 
 const add = async (req, res, next) => {
-  const recipe = req.body;
-
+  const { recipe, ingredient } = req.body;
   try {
     const insertId = await tables.recipe.create(recipe);
 
-    res.status(201).json({ insertId });
+    const ingredientInsert = ingredient.map(async (i) => {
+      await tables.recipeIngredient.create({
+        recipe_id: insertId,
+        ingredient_id: i.id,
+      });
+    });
+
+    res.status(201).json({ insertId, ingredientInsert });
   } catch (err) {
+    console.error(err);
     next(err);
   }
 };

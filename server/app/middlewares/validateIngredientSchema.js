@@ -56,7 +56,6 @@ const validateIngredientSchema = (req, res, next) => {
     salt,
     fiber,
   } = req.body;
-
   const validate = ingredientSchema.safeParse({
     name,
     category,

@@ -11,7 +11,7 @@ function Menu({ currentUser, setCurrentUser }) {
   };
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3310/api/auth/logout", {
+      await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/logout`, {
         withCredentials: true,
       });
 

@@ -73,6 +73,8 @@ function RecipeDetails() {
           <div className="customLine" />
 
           <p className="recipeDescription">{recipe_description}</p>
+
+          <p className="recipeDescription">{recipe_description}</p>
         </div>
         <div className="lineContainer">
           <h2 className="authorTitle">Auteur</h2>
@@ -88,6 +90,8 @@ function RecipeDetails() {
         <div className="lineContainer">
           <h2 className="avisTitle">Donnez votre avis</h2>
           <div className="customLine" />
+
+          <div className="comment-box">-- Ajouter un commentaire --</div>
 
           <div className="comment-box">-- Ajouter un commentaire --</div>
         </div>
