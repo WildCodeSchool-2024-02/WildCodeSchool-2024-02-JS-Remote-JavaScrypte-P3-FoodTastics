@@ -27,7 +27,7 @@ function RecipeDetails() {
     <div>
       <BackButton />
       <div className="recipeDetailContainer ">
-        <h1 className="button">{recipe_name}</h1>
+        <h1 className="recipeDetailTitle">{recipe_name}</h1>
         <div className="buttonContainer">
           <button type="button" className="numberPeople">
             😋 Nombre de personnes : {recipe_number_of_people}
@@ -71,6 +71,8 @@ function RecipeDetails() {
         <div className="lineContainer">
           <h2 className="recipeTitle">Recette</h2>
           <div className="customLine" />
+
+          <p className="recipeDescription">{recipe_description}</p>
 
           <p className="recipeDescription">{recipe_description}</p>
         </div>

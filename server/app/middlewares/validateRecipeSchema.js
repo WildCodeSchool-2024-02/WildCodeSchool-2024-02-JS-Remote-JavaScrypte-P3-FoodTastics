@@ -16,7 +16,7 @@ const recipeSchema = z.object({
     })
     .int()
     .positive(),
-  description: z.string().min(50),
+  description: z.string().min(30),
   image: z.string().url(),
   set_up_time: z
     .number({
@@ -28,14 +28,17 @@ const recipeSchema = z.object({
 });
 
 const validateRecipeSchema = (req, res, next) => {
-  const { name, number_of_people, description, image, set_up_time } = req.body;
+  const { recipe } = req.body;
+
+  const { name, number_of_people, description, image, set_up_time } =
+    recipe.data;
 
   const validate = recipeSchema.safeParse({
     name,
-    number_of_people,
+    number_of_people: Number(number_of_people),
     description,
     image,
-    set_up_time,
+    set_up_time: Number(set_up_time),
   });
 
   if (!validate.success) {
