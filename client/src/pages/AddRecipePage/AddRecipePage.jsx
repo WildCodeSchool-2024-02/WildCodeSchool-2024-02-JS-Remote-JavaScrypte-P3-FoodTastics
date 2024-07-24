@@ -1,8 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import "./AddRecipePage.css";
-import { NavLink, useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import {
+  NavLink,
+  useLoaderData,
+  useOutletContext,
+  useNavigate,
+} from "react-router-dom";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -11,10 +16,35 @@ import Autosuggest from "react-autosuggest";
 import BackButton from "../../components/BackButton/BackButton";
 
 export default function AddRecipePage() {
+  const navigate = useNavigate();
   const ingredientsData = useLoaderData();
   const [value, setValue] = useState("");
   const [ingredientsSelected, setIngredientsSelected] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
+
+  const { currentUser } = useOutletContext();
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/auth/checkauth`,
+          {
+            withCredentials: true,
+          }
+        );
+        const authenticatedUser = response.data.user;
+        if (!authenticatedUser || authenticatedUser.id !== currentUser.id) {
+          navigate("/connexion");
+        }
+      } catch (e) {
+        console.error(e);
+        navigate("connexion");
+      }
+    };
+
+    checkAuth();
+  }, [currentUser, navigate]);
 
   const {
     handleSubmit,
@@ -22,11 +52,18 @@ export default function AddRecipePage() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (formData) => {
-    const data = { ...formData };
+  if (!currentUser) {
+    navigate("/connexion");
+  }
+
+  const onSubmit = async (data) => {
+    const myObj = {};
+
+    myObj.recipe = { data, user_id: currentUser.id, badge_id: 1 };
+    myObj.ingredient = ingredientsSelected;
 
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/api/recipe`, data);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/recipe`, myObj);
       toast.success("Votre recette a bien été ajoutée!");
     } catch (err) {
       console.error(err);
@@ -112,7 +149,7 @@ export default function AddRecipePage() {
               {...register("name", {
                 required: "Le nom de la recette est obligatoire",
                 pattern: {
-                  value: /^[a-zA-Z\s]*$/,
+                  value: /^([A-Z][A-Za-z ,.'`-]{3,150})$/,
                   message:
                     "Le nom de la recette ne doit contenir que des lettres",
                 },
@@ -148,7 +185,7 @@ export default function AddRecipePage() {
           </div>
           <div className="recipeSecondaryInfo">
             <input
-              type="text"
+              type="number"
               className="numberOfPeople"
               name="number_of_people"
               placeholder="Nombre de personnes"
@@ -167,7 +204,7 @@ export default function AddRecipePage() {
               </span>
             )}
             <input
-              type="text"
+              type="number"
               className="preparationTime"
               name="set_up_time"
               placeholder="Temps de préparation (en minutes)"

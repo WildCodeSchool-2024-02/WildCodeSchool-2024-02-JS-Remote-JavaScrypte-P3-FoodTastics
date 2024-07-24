@@ -6,7 +6,7 @@ const ingredientSchema = z.object({
       invalid_type_error: "Saissisez un nom d'ingrédient valide",
     })
     .min(2, {
-      message: "votre ingredientdoit contenir au minimun 2 charactères",
+      message: "votre ingredient doit contenir au minimun 2 charactères",
     }),
 
   category: z.string({
@@ -56,7 +56,6 @@ const validateIngredientSchema = (req, res, next) => {
     salt,
     fiber,
   } = req.body;
-
   const validate = ingredientSchema.safeParse({
     name,
     category,

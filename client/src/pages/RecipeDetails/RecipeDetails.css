@@ -18,10 +18,13 @@
   src: url("/fonts/NowAlt-Medium.otf");
 }
 
-.container {
+.recipeDetailTitle {
+  color: var(--second-color);
+}
+.recipeDetailContainer {
   max-width: 100%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,21 +32,27 @@
 
 .recipeName {
   text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   color: var(--second-color);
   font-family: "Aleo-Black";
 }
 
+.people_time {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  width: 100%;
+}
 .numberPeople {
   border: 2px solid var(--main-color);
-  border-radius: 15px;
+  border-radius: 1rem;
   background-color: white;
-  font-size: 12px;
+  font-size: 0.8rem;
   padding: 5px 10px;
   text-align: center;
   float: right;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   font-family: "now-medium";
   color: var(--second-color);
 }
@@ -51,7 +60,7 @@
 .recipeDetailImage {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0.8rem;
 }
 
 .buttonContainer {
@@ -64,9 +73,9 @@
 .planning,
 .favoris {
   border: 2px solid var(--main-color);
-  border-radius: 15px;
+  border-radius: 1rem;
   background-color: white;
-  font-size: 12px;
+  font-size: 0.8rem;
   padding: 5px 10px;
   text-align: center;
   width: 48%;
@@ -78,10 +87,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 200%;
+  width: 100%;
+  width: 100%;
 }
 
-.ingredientTitle {
+.ingredientTitle,
+.recipeTitle,
+.authorTitle,
+.avisTitle {
   font-size: 17px;
   margin-top: 20px;
   text-align: left;
@@ -93,15 +106,16 @@
 .customLine {
   height: 1px;
   width: 100%;
-  background-color: black;
-  margin-top: 10px;
+  background-color: var(--second-color);
+  margin-top: 0.8rem;
 }
 
 .ingredientContainer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 1.5rem;
   width: 100%;
 }
 
@@ -109,7 +123,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 85px;
+  margin: 0.8rem 5rem;
   box-sizing: border-box;
 }
 
@@ -129,8 +143,8 @@
 
 .recipeDescription {
   text-align: justify;
-  margin: 20px 0;
-  font-family: "now-medium";
+  margin: 1.5rem 0;
+  font-family: "now-light";
   color: var(--second-color);
 }
 
@@ -146,7 +160,6 @@
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  width: 90%;
   margin: 20px auto;
   text-align: center;
   font-size: 16px;
@@ -159,37 +172,43 @@
   );
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .recipeName {
     font-size: 2.5em;
     width: 100%;
   }
 
   .numberPeople {
-    margin: 10px 0;
-    font-size: 14px;
+    margin: 0.8rem 0;
+    font-size: 1.2rem;
   }
 
   .recipeDetailImage {
-    width: 40%;
+    width: 50%;
+    width: 50%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 0.8rem;
   }
 
   .buttonContainer {
-    max-width: 500px;
+    max-width: 50%;
   }
 
+  .lineContainer {
+    width: 50%;
+  }
+  .numberPeopole,
+  .time,
   .planning,
   .favoris {
-    font-size: 14px;
+    font-size: 1.2rem;
   }
 
   .ingredientTitle,
   .recipeTitle,
   .authorTitle,
   .avisTitle {
-    font-size: 24px;
+    font-size: 2rem;
   }
 
   .customLine {
@@ -202,17 +221,17 @@
   }
 
   .recipeDescription {
-    margin: 30px 0;
+    margin: 2rem 0;
   }
 
   .textContainer {
-    margin: 30px 0;
+    margin: 2rem;
   }
 
   .comment-box {
-    padding: 30px;
+    padding: 2rem;
     width: 80%;
-    margin: 30px auto;
-    font-size: 18px;
+    margin: 2rem auto;
+    font-size: 1.5rem;
   }
 }

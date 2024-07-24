@@ -76,7 +76,7 @@ export default function DashboardPage() {
           </li>
           <li>
             <NavLink
-              to="/recipes"
+              to={`/user/recipes/${user_id}`}
               className={({ isActive }) =>
                 isActive ? "links-dashboard-active" : "links-dashboard"
               }

@@ -67,6 +67,28 @@ class UserRepository extends AbstractRepository {
     return rows;
   }
 
+  async readRecipesByUserId(userId) {
+    const [rows] = await this.database.query(
+      `SELECT
+        id AS recipe_id,
+        name AS recipe_name,
+        number_of_people,
+        description,
+        image,      
+        date,  
+        set_up_time,
+        is_validated
+    
+        FROM
+         recipe
+        WHERE
+          user_id = ?`,
+      [userId]
+    );
+
+    return rows;
+  }
+
   async readAll() {
     const [rows] = await this.database.query(`select * from ${this.table}`);
 

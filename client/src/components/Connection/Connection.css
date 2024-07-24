@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: "now-medium";
-  src: url("../../../public/fonts/NowAlt-Medium.otf");
+  src: url("/fonts/NowAlt-Medium.otf");
 }
 
 .connection-container {

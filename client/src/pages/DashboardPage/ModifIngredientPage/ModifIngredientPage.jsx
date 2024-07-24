@@ -64,7 +64,10 @@ export default function ModifIngredientPage() {
     const data = { ...formData };
 
     try {
-      await axios.put(`http://localhost:3310/api/ingredient/${id}`, data);
+      await axios.put(
+        `${import.meta.env.VITE_API_URL}/api/ingredient/${id}`,
+        data
+      );
 
       toast.success("Modification effectuée avec succès");
     } catch (err) {
@@ -75,7 +78,9 @@ export default function ModifIngredientPage() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3310/api/ingredient/${id}`);
+      await axios.delete(
+        `${import.meta.env.VITE_API_URL}/api/ingredient/${id}`
+      );
       toast.success("Ingrédient supprimé avec succès");
       navigate("/admin/ingredients");
     } catch (err) {

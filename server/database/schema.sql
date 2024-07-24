@@ -104,7 +104,7 @@ CREATE TABLE recipe_ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     recipe_id INT NOT NULL,
     ingredient_id INT NOT NULL,
-    quantity INT NOT NULL,
+    quantity INT DEFAULT 100,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
     FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
 );

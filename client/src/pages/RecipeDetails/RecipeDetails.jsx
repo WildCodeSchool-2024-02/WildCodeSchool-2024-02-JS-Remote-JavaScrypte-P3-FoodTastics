@@ -12,10 +12,10 @@ function RecipeDetails() {
     recipe_description,
     recipe_image,
     recipe_date,
-    user_id,
+    set_up_time,
     user_firstname,
     user_lastname,
-  } = data.recipe;
+  } = data.recipeUser;
 
   const postDate = new Date(recipe_date);
   const day = postDate.getDate();
@@ -26,11 +26,16 @@ function RecipeDetails() {
   return (
     <div>
       <BackButton />
-      <div className="container">
-        <h1 className="recipeName">{recipe_name}</h1>
-        <button type="button" className="numberPeople">
-          Nombre de personne : {recipe_number_of_people}
-        </button>
+      <div className="recipeDetailContainer ">
+        <h1 className="recipeDetailTitle">{recipe_name}</h1>
+        <div className="buttonContainer">
+          <button type="button" className="numberPeople">
+            😋 Nombre de personnes : {recipe_number_of_people}
+          </button>
+          <button type="button" className="numberPeople">
+            ⏰ Temps : {set_up_time}´
+          </button>
+        </div>
         <img
           className="recipeDetailImage"
           src={recipe_image}
@@ -39,7 +44,7 @@ function RecipeDetails() {
 
         <div className="buttonContainer">
           <button type="button" className="planning">
-            Ajouter au planning
+            📅 Ajouter au planning
           </button>
           <button type="button" className="favoris">
             Mettre en favoris 🧡
@@ -49,27 +54,28 @@ function RecipeDetails() {
         <div className="lineContainer">
           <h2 className="ingredientTitle">Ingrédients</h2>
           <div className="customLine" />
-        </div>
 
-        <div className="ingredientContainer">
-          {data.recipeIngredients.map((ingredient) => (
-            <div key={ingredient.ingredient_id} className="ingredientItem">
-              <img
-                className="ingredientImage"
-                src={ingredient.ingredient_image}
-                alt={ingredient.ingredient_name}
-              />
-              <p className="ingredientName">{ingredient.ingredient_name}</p>
-            </div>
-          ))}
+          <div className="ingredientContainer">
+            {data.recipeIngredients.map((ingredient) => (
+              <div key={ingredient.ingredient_id} className="ingredientItem">
+                <img
+                  className="ingredientImage"
+                  src={ingredient.ingredient_image}
+                  alt={ingredient.ingredient_name}
+                />
+                <p className="ingredientName">{ingredient.ingredient_name}</p>
+              </div>
+            ))}
+          </div>
         </div>
-
         <div className="lineContainer">
           <h2 className="recipeTitle">Recette</h2>
           <div className="customLine" />
-        </div>
-        <p className="recipeDescription">{recipe_description}</p>
 
+          <p className="recipeDescription">{recipe_description}</p>
+
+          <p className="recipeDescription">{recipe_description}</p>
+        </div>
         <div className="lineContainer">
           <h2 className="authorTitle">Auteur</h2>
           <div className="customLine" />
@@ -77,16 +83,16 @@ function RecipeDetails() {
         <div className="textContainer">
           <p className="post">Postée le : {formattedDate}</p>
           <p className="">
-            Par : {user_id} {user_firstname} {user_lastname}
+            Par : {user_firstname} {user_lastname}
           </p>
         </div>
 
         <div className="lineContainer">
           <h2 className="avisTitle">Donnez votre avis</h2>
           <div className="customLine" />
-        </div>
 
-        <div className="comment-box">-- Ajouter un commentaire --</div>
+          <div className="comment-box">-- Ajouter un commentaire --</div>
+        </div>
       </div>
     </div>
   );

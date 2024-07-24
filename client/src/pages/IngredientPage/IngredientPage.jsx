@@ -53,7 +53,7 @@ export default function IngredientPage() {
     data.user_id = userId;
 
     try {
-      await axios.post("http://localhost:3310/api/ingredient", data);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/ingredient`, data);
       toast.success("Votre formulaire a bien été soumis");
     } catch (err) {
       console.error(err);

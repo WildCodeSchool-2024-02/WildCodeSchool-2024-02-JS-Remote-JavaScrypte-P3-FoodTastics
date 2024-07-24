@@ -59,7 +59,10 @@ export default function ModifUserPage() {
     const data = { ...formData };
 
     try {
-      await axios.put(`http://localhost:3310/api/user/${user_id}`, data);
+      await axios.put(
+        `${import.meta.env.VITE_API_URL}/api/user/${user_id}`,
+        data
+      );
 
       toast.success("Modification effectuée avec succès");
     } catch (err) {
