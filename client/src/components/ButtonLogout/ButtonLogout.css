@@ -1,0 +1,44 @@
+:root {
+  --main-color: #e88d67;
+  --second-color: #0e4749;
+  --third-color: white;
+}
+
+@font-face {
+  font-family: "NowAlt-Medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
+.logoutNavButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--third-color);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "NowAlt-Medium";
+  margin-bottom: 1.5rem;
+  margin: 2rem 1rem 1rem 5rem;
+}
+
+.logoutNavButton {
+  background-color: var(--second-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .logoutNavButton {
+    font-size: 16px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .logoutNavButton {
+    font-size: 17px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
+}

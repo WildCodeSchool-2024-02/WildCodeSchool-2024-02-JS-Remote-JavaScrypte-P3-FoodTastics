@@ -2,7 +2,7 @@
 import "./Sign.css";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 export default function Sign() {
   const {
@@ -22,8 +22,10 @@ export default function Sign() {
         `${import.meta.env.VITE_API_URL}/api/user/register`,
         data
       );
+      toast.success("Vous êtes bien inscrit(e) !");
     } catch (e) {
       console.error(e.response.data);
+      toast.error("Une erreur est survenue, veuillez réessayer ultérieurement");
     }
   };
 
