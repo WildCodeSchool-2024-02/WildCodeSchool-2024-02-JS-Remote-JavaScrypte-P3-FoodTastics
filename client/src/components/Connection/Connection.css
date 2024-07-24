@@ -4,12 +4,26 @@
   --third-color: white;
 }
 
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "now-medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
 .connection-container {
   padding: 20px 20px 20px 20px;
   background-color: var(--second-color);
   border-radius: 15px;
   border: solid 5px var(--second-color);
   margin-bottom: 1.5rem;
+  font-family: "now-medium";
 }
 
 .form-connection {
@@ -22,6 +36,7 @@
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  font-family: "Aleo-Black";
 }
 
 .form-connection input {
@@ -30,8 +45,9 @@
   padding-bottom: 1rem;
   border: none;
   border-bottom: solid 1px;
-  margin: 0.5rem;
+  margin: 0.5rem 0.2rem 1rem 0.2rem;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .btn-connection {
@@ -43,10 +59,17 @@
   margin: 1.5rem 5rem 1.5rem 5rem;
   font-size: 14px;
   cursor: pointer;
+  font-family: "now-medium";
 }
 
-span {
+.error {
   color: red;
+  margin-bottom: 0.7rem;
+}
+
+.label-connection {
+  color: white;
+  margin-top: 0.1rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -73,16 +96,20 @@ span {
 }
 
 @media screen and (min-width: 1201px) {
+  .connection-container {
+    align-content: center;
+  }
+
   .form-connection {
     padding-bottom: 60px;
   }
 
   .title-connection {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .form-connection input {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .btn-connection {

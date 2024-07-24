@@ -11,12 +11,25 @@ const browse = async (req, res, next) => {
 
 const read = async (req, res, next) => {
   try {
-    const user = await tables.user.read(req.params.id);
+    const user = await tables.user.readBadges(req.params.id);
     if (user == null) {
       res.sendStatus(404);
-    } else {
-      res.json(user);
     }
+    const menu = await tables.user.readMenus(req.params.id);
+    if (menu == null) {
+      res.sendStatus(404);
+    }
+
+    const recipes = await tables.user.readRecipesByUserId(req.params.id);
+    if (recipes == null) {
+      res.sendStatus(404);
+    }
+    const data = {
+      user,
+      menu,
+      recipes,
+    };
+    res.json(data);
   } catch (err) {
     next(err);
   }

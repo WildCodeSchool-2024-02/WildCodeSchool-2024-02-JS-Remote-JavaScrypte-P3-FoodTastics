@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "NowAlt-Medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
 .footer-container {
   display: flex;
   justify-content: space-evenly;
@@ -11,6 +16,8 @@
 .footer-link {
   color: #fffffc;
   text-decoration: none;
+  font-family: "NowAlt-Medium";
+  font-size: 0.8rem;
 }
 
 .footer-link:hover {
@@ -23,6 +30,6 @@
 
 @media screen and (min-width: 768px) {
   .footer-container {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }

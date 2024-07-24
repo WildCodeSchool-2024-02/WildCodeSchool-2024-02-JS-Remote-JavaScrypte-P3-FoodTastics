@@ -4,15 +4,20 @@
 }
 
 @font-face {
-  font-family: "";
-  src: url("");
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
 }
 
 .menu {
   height: 50px;
   width: 50px;
-  margin-right: 0.5em;
-  position: relative;
+  position: fixed;
+  top: 1;
+  left: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2em;
 }
 
 .navbarList {
@@ -33,47 +38,52 @@
   visibility: hidden;
   transition: all 0.7s ease-out;
 }
+
 .menu.active .navbarList {
   left: 0;
   width: 100vw;
   visibility: visible;
 }
+
 .navbarLink {
   display: block;
   text-decoration: none;
-  font-family: "";
+  font-family: "now-light";
   margin: 2em 0;
   font-size: 2rem;
   color: #fffffc;
+  background-color: transparent;
+  border: none;
 }
 
 .navbarLink:hover {
-  color: var(--second-color);
+  text-decoration: underline;
 }
 
 .burgerMenu {
   display: block;
-  position: fixed;
+  position: relative;
   width: 50px;
   height: 50px;
-  background: transparent;
+  background-color: transparent;
   border: none;
 }
 
 .burgerMenu:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .burgerLine,
 .burgerLine::before,
 .burgerLine::after {
   display: block;
-
   height: 3px;
   position: relative;
   border-radius: 3px;
   background-color: var(--second-color);
 }
+
 .burgerLine::before,
 .burgerLine::after {
   content: "";
@@ -81,32 +91,40 @@
   left: 0;
   transition: all 0.9s ease-in-out;
 }
+
 .burgerLine::before {
   transform: translateY(-12px);
 }
+
 .burgerLine::after {
   transform: translateY(12px);
 }
+
 .menu.active .burgerLine::before {
   width: 40px;
   transform: rotate(135deg);
 }
+
 .menu.active .burgerLine::after {
   width: 40px;
   transform: rotate(-135deg);
 }
+
 .menu.active .burgerLine {
   width: 0;
   background: transparent;
   transition: 0.4s;
 }
+
 .menu.inactive .burgerLine {
   width: 30px;
   transition: 0.4s;
 }
+
 .menu.inactive .burgerLine::before {
   width: 40px;
 }
+
 .menu.inactive .burgerLine::after {
   width: 20px;
 }

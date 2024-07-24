@@ -21,6 +21,7 @@ class RecipeLabelRepository extends AbstractRepository {
         r.id AS recipe_id, 
         r.name AS recipe_name, 
         r.image AS recipe_image, 
+        r.date AS recipe_date,
         l.id AS label_id,
         l.name AS label_name
       FROM ${this.table} rl
@@ -40,6 +41,7 @@ class RecipeLabelRepository extends AbstractRepository {
         r.id AS recipe_id, 
         r.name AS recipe_name, 
         r.image AS recipe_image, 
+        r.date AS recipe_date,
         l.id AS label_id, 
         l.name AS label_name
       FROM ${this.table} rl

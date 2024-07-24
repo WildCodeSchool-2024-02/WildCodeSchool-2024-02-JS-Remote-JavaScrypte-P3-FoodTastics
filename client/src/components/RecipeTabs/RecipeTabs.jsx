@@ -1,24 +1,32 @@
-import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useLoaderData, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./RecipeTabs.css";
 
 function RecipeTabs() {
   const recipeLabelData = useLoaderData();
 
-  const [activeTab, setActiveTab] = useState("végétarien");
+  const [activeTab, setActiveTab] = useState("");
+  const [latestRecipes, setLatestRecipes] = useState([]);
+
+  useEffect(() => {
+    const sortedRecipes = [...recipeLabelData].sort(
+      (a, b) => new Date(b.recipe_date) - new Date(a.recipe_date)
+    );
+    setLatestRecipes(sortedRecipes.slice(0, 10));
+  }, [recipeLabelData]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
   const filterRecipes = (tab) => {
-    const filtered = recipeLabelData.filter((label) => {
+    if (tab === "") return latestRecipes;
+    return recipeLabelData.filter((label) => {
       if (tab === "végétarien") return label.label_id === 2;
       if (tab === "sans gluten") return label.label_id === 3;
       if (tab === "sans lactose") return label.label_id === 1;
       return false;
     });
-    return filtered;
   };
 
   const filteredRecipes = filterRecipes(activeTab);
@@ -45,7 +53,7 @@ function RecipeTabs() {
           className={activeTab === "sans lactose" ? "active" : ""}
           onClick={() => handleTabChange("sans lactose")}
         >
-          Sans Glucose
+          Sans Lactose
         </button>
       </div>
       <div className="all-recipes">
@@ -54,6 +62,11 @@ function RecipeTabs() {
             <div key={recipe.recipe_id} className="recipe-card">
               <h3>{recipe.recipe_name}</h3>
               <img src={recipe.recipe_image} alt={recipe.recipe_name} />
+              <Link to={`/details/${recipe.recipe_id}`}>
+                <button type="button" className="buttonDetails">
+                  Details
+                </button>
+              </Link>
             </div>
           ))}
       </div>

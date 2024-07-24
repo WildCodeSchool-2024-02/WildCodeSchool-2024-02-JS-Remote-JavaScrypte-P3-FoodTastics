@@ -4,6 +4,11 @@
   --third-color: white;
 }
 
+@font-face {
+  font-family: "NowAlt-Medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
 .btn {
   display: flex;
   flex-direction: row;
@@ -12,17 +17,18 @@
 
 .button-connexion {
   background-color: var(--main-color);
-  color: var(--third-color);
-  border: solid 1px var(--main-color);
+  color: black;
   border-radius: 25px;
-  font-size: 12px;
-  padding: 0.3 rem 0.5rem 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.4rem;
   cursor: pointer;
   text-decoration: none;
+  font-family: "NowAlt-Medium";
 }
 
 .button-connexion:hover {
-  background: var(--second-color);
+  background-color: var(--second-color);
+  color: var(--third-color);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {

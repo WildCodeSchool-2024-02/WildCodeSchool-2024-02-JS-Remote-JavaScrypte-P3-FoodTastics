@@ -1,11 +1,12 @@
+-- SQLBook: Code
 CREATE TABLE user (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     firstname VARCHAR(80) NOT NULL,
     lastname VARCHAR(80) NOT NULL,
-    password VARCHAR(80) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     pseudo VARCHAR(80) NOT NULL,
     image_profile VARCHAR(255) DEFAULT 'https://cdn.pixabay.com/photo/2017/11/06/18/30/eggplant-2924511_1280.png',
-    email VARCHAR(80) NOT NULL,
+    email VARCHAR(80) NOT NULL UNIQUE,
     role ENUM('admin', 'user') DEFAULT 'user'
 );
 
@@ -103,7 +104,7 @@ CREATE TABLE recipe_ingredient (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     recipe_id INT NOT NULL,
     ingredient_id INT NOT NULL,
-    quantity INT NOT NULL,
+    quantity INT DEFAULT 100,
     FOREIGN KEY (recipe_id) REFERENCES recipe (id) ON DELETE CASCADE,
     FOREIGN KEY (ingredient_id) REFERENCES ingredient (id)
 );
