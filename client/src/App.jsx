@@ -29,7 +29,7 @@ function App() {
       />
       <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       {currentUser ? (
-        <p className="hello">Bonjour {currentUser.firstname} !</p>
+        <p className="hello">Bonjour {currentUser.firstname} ! </p>
       ) : (
         ""
       )}

@@ -1,11 +1,50 @@
+@font-face {
+  font-family: "now-light";
+  src: url("/fonts/now.light.otf");
+}
+@font-face {
+  font-family: "Aleo-Black";
+  src: url("/fonts/Aleo-Black.ttf");
+}
+@font-face {
+  font-family: "now-medium";
+  src: url("/fonts/NowAlt-Medium.otf");
+}
+
 .backButton {
-  font-family: "NowAlt-Mediun";
-  padding: 5px 10px;
-  font-size: 14px;
-  color: white;
-  background-color: #0e4749;
-  border: none;
+  display: flex;
+  font-family: "now-medium";
+  padding: 5px 8px;
+  font-size: 11px;
+  color: black;
+  background-color: white;
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0rem 0rem 0rem 1rem;
+  align-items: center;
+}
+.arrow {
+  width: 30px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .backButton {
+    display: flex;
+    font-family: "now-medium";
+    padding: 5px 20px;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 2rem 0rem 1rem 2rem;
+    align-items: center;
+  }
+  .arrow {
+    width: 40px;
+    margin-right: 15px;
+  }
 }

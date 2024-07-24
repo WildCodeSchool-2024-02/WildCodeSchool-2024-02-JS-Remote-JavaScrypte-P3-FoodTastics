@@ -128,9 +128,6 @@ export default function AdminUsersPage() {
                 Plus de détails
               </NavLink>
             </div>
-            <div className="card-id-ad">
-              <p>{u.id}</p>
-            </div>
           </div>
         ))}
       </div>

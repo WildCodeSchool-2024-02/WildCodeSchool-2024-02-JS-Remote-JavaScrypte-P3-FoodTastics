@@ -28,87 +28,12 @@
 
   .tabs button:hover {
     background-color: #e88d67;
+    color: black;
   }
 
   .tabs button.active {
     background-color: #e88d67;
-  }
-
-  .all-recipes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .recipe-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    width: 100%;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .recipe-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-
-  .recipe-card h3 {
-    font-family: "Aleo-Black";
-    font-size: 1.5rem;
-    color: #0e4749;
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-  }
-
-  .recipes-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .tabs button {
-    font-family: "NowAlt-Medium";
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 14px;
-    color: white;
-    background-color: #0e4749;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .tabs button:hover {
-    background-color: #e88d67;
-  }
-
-  .tabs button.active {
-    background-color: #e88d67;
+    color: black;
   }
 
   .all-recipes {
@@ -149,7 +74,99 @@
     padding: 5px 10px;
     margin: 0 10px;
     font-size: 14px;
+    color: black;
+    background-color: #e88d67;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .recipes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .tabs button {
+    font-family: "NowAlt-Medium";
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 14px;
     color: white;
+    background-color: #0e4749;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .tabs button:hover {
+    background-color: #e88d67;
+    color: black;
+  }
+
+  .tabs button.active {
+    background-color: #e88d67;
+    color: black;
+  }
+
+  .all-recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .recipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .recipe-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .recipe-card h3 {
+    font-family: "Aleo-Black";
+    font-size: 1.5rem;
+    color: #0e4749;
+    margin-bottom: 10px;
+  }
+
+  .buttonDetails {
+    font-family: "NowAlt-Medium";
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-size: 14px;
+    color: black;
     background-color: #e88d67;
     border: none;
     border-radius: 5px;

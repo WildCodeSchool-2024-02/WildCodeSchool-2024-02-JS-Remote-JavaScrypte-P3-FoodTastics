@@ -345,4 +345,13 @@
     width: 7rem;
     height: 7rem;
   }
+
+  .button-modify-admin {
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width: 11rem;
+    font-size: 1rem;
+  }
 }

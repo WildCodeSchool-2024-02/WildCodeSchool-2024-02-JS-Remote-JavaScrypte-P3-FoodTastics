@@ -25,6 +25,11 @@
   padding: 0.5rem;
 }
 
+.high-page-recipe {
+  display: flex;
+  align-items: center;
+}
+
 .btn-add-recipe {
   margin-left: 1rem;
   text-decoration: none;
@@ -32,7 +37,8 @@
   background-color: var(--main-color);
   color: black;
   border-radius: 1rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 14px;
 }
 
 .btn-add-recipe:hover {
@@ -95,6 +101,10 @@
   background-color: var(--second-color);
 }
 
+p {
+  margin-bottom: 15px;
+}
+
 @media screen and (min-width: 768px) {
   .recipes-container-ad {
     margin-top: 2rem;
@@ -112,5 +122,17 @@
   .recipe-card-ad:hover {
     height: 29rem;
     width: 17%;
+  }
+
+  .btn-add-recipe {
+    padding: 0.5rem 0.5rem;
+    font-size: 16px;
+    margin-right: 3rem;
+  }
+
+  .high-page-recipe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

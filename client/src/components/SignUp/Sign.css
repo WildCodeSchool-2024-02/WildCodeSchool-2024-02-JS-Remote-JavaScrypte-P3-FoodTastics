@@ -52,12 +52,14 @@
 
 .btn-sign {
   background-color: var(--main-color);
-  color: var(--third-color);
+  color: black;
   border-radius: 25px;
   border: solid 1px var(--main-color);
   padding: 0.5rem;
   margin: 1.5rem 5rem 1.5rem 5rem;
   font-size: 14px;
+  cursor: pointer;
+  font-family: "now-medium";
 }
 
 .error {

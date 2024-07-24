@@ -42,10 +42,13 @@ export default function AdminRecipesPage() {
 
   return (
     <div className="recipes-body">
-      <BackButton />
-      <NavLink to="/ajout-recette" className="btn-add-recipe">
-        Ajouter une nouvelle recette
-      </NavLink>
+      <div className="high-page-recipe">
+        <BackButton />
+        <NavLink to="/ajout-recette" className="btn-add-recipe">
+          Ajouter une nouvelle recette
+        </NavLink>
+      </div>
+
       <ul className="list-dashboard">
         <li>
           <NavLink
@@ -109,7 +112,7 @@ export default function AdminRecipesPage() {
 
             <div className="recipe-infos">
               <p> 😋 Recette pour {r.number_of_people} personnes </p>
-              <p>👨‍🍳 Postée par (id): {r.user_id} </p>
+
               <div className="validation">
                 {r.is_validated ? "✔️ validée" : " ❌ En attente de validation"}
               </div>
