@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import ButtonConnection from "../ButtonConnection/ButtonConnection";
+import ButtonLogout from "../ButtonLogout/ButtonLogout";
 import "./Navbar.css";
 import Searchbar from "../Searchbar/Searchbar";
 
@@ -29,7 +30,14 @@ export default function Navbar({ currentUser, setCurrentUser }) {
         <Menu currentUser={currentUser} setCurrentUser={setCurrentUser} />
       </div>
       <Searchbar />
-      <ButtonConnection />
+      {currentUser ? (
+        <ButtonLogout
+          currentUser={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
+      ) : (
+        <ButtonConnection />
+      )}
     </div>
   );
 }
@@ -43,8 +51,5 @@ Navbar.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   }),
-  setCurrentUser: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  }),
+  setCurrentUser: PropTypes.func,
 };
