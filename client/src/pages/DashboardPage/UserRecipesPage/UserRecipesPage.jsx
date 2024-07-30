@@ -49,7 +49,7 @@ export default function UserRecipesPage() {
       <ul className="list-dashboard">
         <li>
           <NavLink
-            to="/dashboard/5"
+            to={`/dashboard/${currentUser.id}`}
             className={({ isActive }) =>
               isActive ? "links-dashboard-active" : "links-dashboard"
             }
